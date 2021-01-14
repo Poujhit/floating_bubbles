@@ -5,17 +5,29 @@ import 'package:simple_animations/simple_animations.dart';
 
 import 'bubble_floating_animation.dart';
 
+/// Creates Floating Bubbles in the Background of Any widgets
 class Bubbles extends StatefulWidget {
+  /// Number of Bubbles to be shown per second.
   final int noOfBubbles;
 
+  /// Add Color to the Bubble
+  ///
+  /// For example colorOfBubbles = Colors.white.withAlpha(30);
+  /// .withAlpha will give a lighter shade to the bubbles.
   final Color colorOfBubbles;
 
+  /// Add Size Factor to the bubbles
+  ///
+  /// Typically it should be > 0 and < 0.5. Otherwise the bubble size will be too large.
   final double sizeFactor;
 
+  /// Creates Floating Bubbles in the Background of Any widgets.
+  ///
+  /// All Fields Are Required to make a new Instance of Bubbles.
   Bubbles({
     @required this.noOfBubbles,
     @required this.colorOfBubbles,
-    this.sizeFactor,
+    @required this.sizeFactor,
   });
 
   @override
@@ -23,8 +35,10 @@ class Bubbles extends StatefulWidget {
 }
 
 class _BubblesState extends State<Bubbles> {
+  /// Creating a Random object.
   final Random random = Random();
 
+  /// initialises a empty list of bubbles.
   final List<BubbleFloatingAnimation> bubbles = [];
 
   @override
@@ -37,6 +51,7 @@ class _BubblesState extends State<Bubbles> {
 
   @override
   Widget build(BuildContext context) {
+    /// Creates a Loop Animation of Bubbles that float around the screen from bottom to top.
     return LoopAnimation(
       tween: ConstantTween(1),
       builder: (context, child, _) {
@@ -52,7 +67,9 @@ class _BubblesState extends State<Bubbles> {
     );
   }
 
+  /// This Function checks whether the bubbles in the screen have to be restarted due to
+  /// frame skips.
   _simulateBubbles() {
-    bubbles.forEach((particle) => particle.checkIfParticleNeedsToBeRestarted());
+    bubbles.forEach((bubbles) => bubbles.checkIfBubbleNeedsToBeRestarted());
   }
 }
