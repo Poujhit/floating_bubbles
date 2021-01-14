@@ -1,7 +1,6 @@
 name: floating_bubbles
 description: A Flutter Package for adding Floating bubbles in the background to a widget.
 version: 0.0.1
-author: MU Poujhit
 homepage:
 
 environment:
