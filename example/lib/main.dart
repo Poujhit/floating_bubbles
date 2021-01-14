@@ -23,15 +23,14 @@ class HomePage extends StatelessWidget {
       children: [
         Positioned.fill(
           child: Container(
-            height: 300,
-            width: 300,
             color: Colors.blue,
           ),
         ),
         Positioned.fill(
           child: Bubbles(
-            noOfBubbles: 30,
-            colorOfBubbles: Colors.white,
+            noOfBubbles: 40,
+            colorOfBubbles: Colors.white.withAlpha(70),
+            sizeFactor: 0.2,
           ),
         ),
       ],
