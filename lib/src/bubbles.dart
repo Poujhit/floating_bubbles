@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:simple_animations/simple_animations.dart';
 
 import 'bubble_floating_animation.dart';
-import 'bubble_painter.dart';
 
 class Bubbles extends StatefulWidget {
   final int noOfBubbles;
