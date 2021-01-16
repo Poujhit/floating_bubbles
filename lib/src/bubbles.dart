@@ -5,8 +5,8 @@ import 'package:simple_animations/simple_animations.dart';
 
 import 'bubble_floating_animation.dart';
 
-/// Creates Floating Bubbles in the Background of Any widgets
-class Bubbles extends StatefulWidget {
+/// Creates Floating Bubbles in the Foreground of Any [widgets].
+class FloatingBubbles extends StatefulWidget {
   /// Number of Bubbles to be shown per second.
   final int noOfBubbles;
 
@@ -21,20 +21,20 @@ class Bubbles extends StatefulWidget {
   /// Typically it should be > 0 and < 0.5. Otherwise the bubble size will be too large.
   final double sizeFactor;
 
-  /// Creates Floating Bubbles in the Background of Any widgets.
+  /// Creates Floating Bubbles in the Foreground to Any widgets.
   ///
-  /// All Fields Are Required to make a new Instance of Bubbles.
-  Bubbles({
+  /// All Fields Are Required to make a new [Instance] of Bubbles.
+  FloatingBubbles({
     @required this.noOfBubbles,
     @required this.colorOfBubbles,
     @required this.sizeFactor,
   });
 
   @override
-  _BubblesState createState() => _BubblesState();
+  _FloatingBubblesState createState() => _FloatingBubblesState();
 }
 
-class _BubblesState extends State<Bubbles> {
+class _FloatingBubblesState extends State<FloatingBubbles> {
   /// Creating a Random object.
   final Random random = Random();
 
