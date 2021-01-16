@@ -28,7 +28,9 @@ class FloatingBubbles extends StatefulWidget {
     @required this.noOfBubbles,
     @required this.colorOfBubbles,
     @required this.sizeFactor,
-  });
+  })  : assert(noOfBubbles != null),
+        assert(colorOfBubbles != null),
+        assert(sizeFactor != null && sizeFactor > 0 && sizeFactor < 0.5);
 
   @override
   _FloatingBubblesState createState() => _FloatingBubblesState();
