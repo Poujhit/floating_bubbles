@@ -38,7 +38,7 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
  The code for the Example shown below is [here](https://pub.dev/packages/floating_bubbles/example).
 
  <p align = "middle">
- <img src="https://github.com/Poujhit/floating_bubbles/blob/master/screenshots/video.gif" width="320" height = "650">
+ <img src="https://raw.githubusercontent.com/Poujhit/floating_bubbles/master/screenshots/video.gif" width="320" height = "650">
  </p>
  
 
