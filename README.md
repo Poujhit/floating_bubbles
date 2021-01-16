@@ -26,7 +26,7 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
       ),
      ),
      Positioned.fill(
-         child: Bubbles(
+         child: FloatingBubbles(
          noOfBubbles: 20,
          colorOfBubbles: Colors.white.withAlpha(30),
          sizeFactor: 0.2,
