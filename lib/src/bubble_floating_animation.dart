@@ -29,21 +29,53 @@ class BubbleFloatingAnimation {
 
   /// Function to Restart the floating bubble animation.
   _restart() {
-    final startPosition = Offset(-0.2 + 1.4 * random.nextDouble(), 1.2);
-    final endPosition = Offset(-0.2 + 1.4 * random.nextDouble(), -0.2);
+    final startPosition = Offset(
+      -0.2 + 1.4 * random.nextDouble(),
+      1.2,
+    );
+    final endPosition = Offset(
+      -0.2 + 1.4 * random.nextDouble(),
+      -0.2,
+    );
 
     tween = MultiTween<_OffsetProps>()
-      ..add(_OffsetProps.x, Tween(begin: startPosition.dx, end: endPosition.dx))
-      ..add(_OffsetProps.y, Tween(begin: startPosition.dy, end: endPosition.dy));
+      ..add(
+        _OffsetProps.x,
+        Tween(
+          begin: startPosition.dx,
+          end: endPosition.dx,
+        ),
+      )
+      ..add(
+        _OffsetProps.y,
+        Tween(
+          begin: startPosition.dy,
+          end: endPosition.dy,
+        ),
+      );
 
-    duration = Duration(milliseconds: 3000) + Duration(milliseconds: random.nextInt(6000));
-    startTime = Duration(milliseconds: DateTime.now().millisecondsSinceEpoch);
+    duration = Duration(
+          milliseconds: 3000,
+        ) +
+        Duration(
+          milliseconds: random.nextInt(
+            6000,
+          ),
+        );
+
+    startTime = Duration(
+      milliseconds: DateTime.now().millisecondsSinceEpoch,
+    );
+
+    /// Size of each Bubble is calculated through this.
     size = 0.2 + random.nextDouble() * 0.4;
   }
 
   /// Shuffles the position of bubbles around the screen.
   void _shuffle() {
-    startTime -= Duration(milliseconds: (this.random.nextDouble() * duration.inMilliseconds).round());
+    startTime -= Duration(
+      milliseconds: (this.random.nextDouble() * duration.inMilliseconds).round(),
+    );
   }
 
   /// A Function to Check if a bubble needs to be recontructed in the ui.
@@ -57,7 +89,10 @@ class BubbleFloatingAnimation {
   ///
   /// if the progress returns 1, then that bubble has reached the top.
   double progress() {
-    return ((Duration(milliseconds: DateTime.now().millisecondsSinceEpoch).inMicroseconds - startTime.inMicroseconds) /
+    return ((Duration(
+                  milliseconds: DateTime.now().millisecondsSinceEpoch,
+                ).inMicroseconds -
+                startTime.inMicroseconds) /
             duration.inMicroseconds)
         .clamp(0.0, 1.0)
         .toDouble();
