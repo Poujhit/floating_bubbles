@@ -5,6 +5,8 @@
 * **Fix**: Documentation updated throughout due to change in Api.
 * **Fix**: Changed background to foreground in the documentation.
 * **Update**: Updated example in **example/main.dart**.
+* **Fix**: Code Formatted.
+* **Fix**: Added assertion checks while initializing **FloatingBubbles**.
 
 ## [0.0.1] - 14 January 2021
 
