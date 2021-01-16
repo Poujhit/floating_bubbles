@@ -1,3 +1,8 @@
+## [0.0.3] - 16 January 2021
+
+* **Fix**: Readme example was using old api.
+* **Fix**: Fixed Code Formatting in code files.
+
 ## [0.0.2] - 16 January 2021
 
 * **Breaking Change**: Class **Bubbles** is changed to **FloatingBubbles**. Api is changed.
