@@ -19,7 +19,7 @@ import 'package:floating_bubbles/floating_bubbles.dart';
 Here is an snippet on how to use Floating Bubbles to any Widget.
 ```dart
 ...
-
+...
  Stack(
     children: [
      Positioned.fill(
