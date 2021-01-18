@@ -34,8 +34,12 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
          sizeFactor: 0.2,
     ),
  );
- ```
-
+ ``` 
+ ## Parameters:
+ | Name | Description | Is It Required | Default Value |
+ | -------------- | :----------------------------------------: | :---: | :------: |
+ | `noOfBubbles` | No. of Bubbles to be present in the screen at a given Time | **Yes** | 20 |
+ 
  ## Example
  The code for the Example shown below is [here](https://pub.dev/packages/floating_bubbles/example).
 
