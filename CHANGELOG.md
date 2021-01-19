@@ -1,3 +1,7 @@
+## [1.0.0-nullsafety.0] - 19 January 2021
+
+* **New**: Nullsafety migration based on version 0.0.4
+
 ## [0.0.4] - 19 January 2021
 
 * **Fix**: `colorOfBubbles` api documentation fixed. 
