@@ -6,7 +6,7 @@ A Flutter Package for adding Floating bubbles in the Foreground to a widget.
 In your flutter project(in pubspec.yaml) add the dependency:
 ```yaml
 dependencies:
-   floating_bubbles: ^0.0.3
+   floating_bubbles: ^0.0.4
 ```
 
 Import the package:
@@ -18,9 +18,7 @@ import 'package:floating_bubbles/floating_bubbles.dart';
 ## Usage
 Here is an snippet on how to use Floating Bubbles to any Widget.
 ```dart
-...
-...
- Stack(
+ return Stack(
     children: [
      Positioned.fill(
         child: Container(
@@ -48,5 +46,12 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
  <p align = "middle">
  <img src="https://raw.githubusercontent.com/Poujhit/floating_bubbles/master/screenshots/video.gif" width="320" height = "650">
  </p>
+
+ ## About Me
+ - [My Works](https://github.com/Poujhit)
+ Suggestions are Welcome. Any issues just open an issue. I will reach you as soon as possible.
+
+ ## Support
+ Give a ⭐/👍 if you liked the work!! :)
  
 
