@@ -6,7 +6,7 @@ A Flutter Package for adding Floating bubbles in the Foreground to a widget.
 In your flutter project(in pubspec.yaml) add the dependency:
 ```yaml
 dependencies:
-   floating_bubbles: ^0.0.4
+   floating_bubbles: ^1.0.0-nullsafety.0
 ```
 
 Import the package:
