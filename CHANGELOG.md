@@ -1,3 +1,12 @@
+## [0.0.4] - 19 January 2021
+
+* **Fix**: `colorOfBubbles` api documentation fixed. 
+* **Fix**: Fixed assertion conditions.
+* **Add**: error statements if assertion fails.
+* **Doc**: Readme updated (has a lot of information about the api now).
+* **Note**: Api is subjected to change in the future with more new features. Will update the readme
+when such changes happen.
+
 ## [0.0.3] - 16 January 2021
 
 * **Fix**: Readme example was using old api.
