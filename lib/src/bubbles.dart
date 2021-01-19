@@ -12,8 +12,8 @@ class FloatingBubbles extends StatefulWidget {
 
   /// Add Color to the Bubble
   ///
-  /// For example colorOfBubbles = Colors.white.withAlpha(30);
-  /// .withAlpha will give a lighter shade to the bubbles.
+  /// For example `colorOfBubbles = Colors.white.withAlpha(30).`\
+  ///`withAlpha(30)` will give a lighter shade to the bubbles.
   final Color colorOfBubbles;
 
   /// Add Size Factor to the bubbles
