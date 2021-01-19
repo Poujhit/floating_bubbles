@@ -36,7 +36,10 @@ class FloatingBubbles extends StatefulWidget {
           colorOfBubbles != null,
           'Color of the bubble cannot be null',
         ),
-        assert(sizeFactor != null && sizeFactor > 0 && sizeFactor < 0.5);
+        assert(
+          sizeFactor != null || sizeFactor > 0 || sizeFactor < 0.5,
+          'Size factor cannot be null or greater than 0.5 or less than 1',
+        );
 
   @override
   _FloatingBubblesState createState() => _FloatingBubblesState();
