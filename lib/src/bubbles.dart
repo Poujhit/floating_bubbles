@@ -7,7 +7,7 @@ import 'bubble_floating_animation.dart';
 
 /// Creates Floating Bubbles in the Foreground of Any [widgets].
 class FloatingBubbles extends StatefulWidget {
-  /// Number of Bubbles to be shown per second.
+  /// Number of Bubbles to be shown per second. Should be [> 10] and not [null].
   final int noOfBubbles;
 
   /// Add Color to the Bubble
@@ -28,8 +28,14 @@ class FloatingBubbles extends StatefulWidget {
     @required this.noOfBubbles,
     @required this.colorOfBubbles,
     @required this.sizeFactor,
-  })  : assert(noOfBubbles != null),
-        assert(colorOfBubbles != null),
+  })  : assert(
+          noOfBubbles != null || noOfBubbles > 10,
+          'Number of Bubbles Cannot be nulland not less than 10',
+        ),
+        assert(
+          colorOfBubbles != null,
+          'Color of the bubble cannot be null',
+        ),
         assert(sizeFactor != null && sizeFactor > 0 && sizeFactor < 0.5);
 
   @override
