@@ -25,20 +25,16 @@ class FloatingBubbles extends StatefulWidget {
   ///
   /// All Fields Are Required to make a new [Instance] of Bubbles.
   FloatingBubbles({
-    @required this.noOfBubbles,
-    @required this.colorOfBubbles,
-    @required this.sizeFactor,
-  })  : assert(
-          noOfBubbles != null || noOfBubbles > 10,
-          'Number of Bubbles Cannot be nulland not less than 10',
+    required this.noOfBubbles,
+    required this.colorOfBubbles,
+    required this.sizeFactor,
+  })   : assert(
+          noOfBubbles > 10,
+          'Number of Bubbles Cannot be less than 10',
         ),
         assert(
-          colorOfBubbles != null,
-          'Color of the bubble cannot be null',
-        ),
-        assert(
-          sizeFactor != null || sizeFactor > 0 || sizeFactor < 0.5,
-          'Size factor cannot be null or greater than 0.5 or less than 1',
+          sizeFactor > 0 || sizeFactor < 0.5,
+          'Size factor cannot be greater than 0.5 or less than 1',
         );
 
   @override
@@ -65,7 +61,7 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
     /// Creates a Loop Animation of Bubbles that float around the screen from bottom to top.
     return LoopAnimation(
       tween: ConstantTween(1),
-      builder: (context, child, _) {
+      builder: (context, child, int _) {
         _simulateBubbles();
         return CustomPaint(
           painter: BubbleModel(

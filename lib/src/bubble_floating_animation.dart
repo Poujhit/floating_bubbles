@@ -8,16 +8,16 @@ enum _OffsetProps { x, y }
 /// This class Creates the animation of the bubbles flowing from bottom to top in the screen.
 class BubbleFloatingAnimation {
   /// Creates a tween between x and y coordinates.
-  MultiTween<_OffsetProps> tween;
+  late MultiTween<_OffsetProps> tween;
 
   /// Size of the bubble
-  double size;
+  late double size;
 
   ///Duration of each bubble to reach to top from bottom.
-  Duration duration;
+  late Duration duration;
 
   /// Start Time duration of each bubble.
-  Duration startTime;
+  late Duration startTime;
 
   /// Random object.
   Random random;
@@ -115,9 +115,9 @@ class BubbleModel extends CustomPainter {
   ///
   /// All Fields are Required.
   BubbleModel({
-    @required this.bubbles,
-    @required this.color,
-    @required this.sizeFactor,
+    required this.bubbles,
+    required this.color,
+    required this.sizeFactor,
   });
 
   /// Painting the bubbles in the screen.
