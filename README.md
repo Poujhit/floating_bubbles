@@ -1,4 +1,4 @@
-# Floating Bubbles
+# Floating Bubbles ![Build Status](https://img.shields.io/github/workflow/status/Poujhit/floating_bubbles/Dry%20Run%20Publish%20plugin/master?style=for-the-badge) 
 
 A Flutter Package for adding Floating bubbles in the Foreground to a widget.
 
