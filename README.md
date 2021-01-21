@@ -1,5 +1,5 @@
-# Floating Bubbles ![Build Status](https://img.shields.io/github/workflow/status/Poujhit/floating_bubbles/Dry%20Run%20Publish%20plugin/master?style=for-the-badge)
-![pub version](https://img.shields.io/pub/v/floating_bubbles?color=blue&style=for-the-badge) ![pre release version](https://img.shields.io/pub/v/floating_bubbles?color=blue&include_prereleases&label=PUB%20Pre-Release&style=for-the-badge)
+# Floating Bubbles [![Build Status](https://img.shields.io/github/workflow/status/Poujhit/floating_bubbles/Dry%20Run%20Publish%20plugin/master?style=for-the-badge)](https://github.com/Poujhit/floating_bubbles/actions)
+[![pub version](https://img.shields.io/pub/v/floating_bubbles?color=blue&style=for-the-badge)](https://pub.dev/packages/floating_bubbles)
 
 ### A Flutter Package for adding Floating bubbles in the Foreground to a widget. 
 
@@ -56,6 +56,6 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
  Suggestions are Welcome. Any issues just open an issue. I will reach you as soon as possible.
 
  ## License
- The scripts and documentation in this project are released under the [MIT](https://github.com/Poujhit/floating_bubbles/blob/master/LICENSE) License
+ The scripts and documentation in this project are released under the [MIT License](https://github.com/Poujhit/floating_bubbles/blob/master/LICENSE) 
  
 
