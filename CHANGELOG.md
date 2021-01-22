@@ -1,3 +1,9 @@
+## [0.0.5] - 22 January 2021
+
+* **Fix**: Fixed assertion conditions for all the apis.
+* **Fix**: Removed unnecessary default assignments to the parameters.
+* **Add**: some changes in the documentation for the api.
+
 ## [0.0.4] - 19 January 2021
 
 * **Fix**: `colorOfBubbles` api documentation fixed. 
