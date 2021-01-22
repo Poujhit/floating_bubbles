@@ -1,0 +1,22 @@
+name: Dry Run Publish plugin
+
+on:
+  push:
+    branches: [ nullsafety-1 ]
+
+jobs:
+  publish:
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Run Dry run
+        uses: sakebook/actions-flutter-pub-publisher@v1.3.1
+        with:
+          credential: ${{ secrets.CREDENTIALS_JSON }}
+          flutter_package: true
+          skip_test: true
+          dry_run: true
