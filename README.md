@@ -7,7 +7,7 @@
 In your flutter project(in pubspec.yaml) add the dependency:
 ```yaml
 dependencies:
-   floating_bubbles: ^0.0.4
+   floating_bubbles: ^0.0.5
 ```
 
 Import the package:
