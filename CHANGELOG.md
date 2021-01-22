@@ -1,6 +1,10 @@
 ## [1.0.0-nullsafety.1] - 22 January 2021
 
-* **New**: Nullsafety migration based on version 0.0.5
+* **New**: Nullsafety migration based on version 0.0.6
+
+## [0.0.6] - 22 January 2021
+
+* **Fix**: Fixed Code Refactoring
 
 
 ## [0.0.5] - 22 January 2021
