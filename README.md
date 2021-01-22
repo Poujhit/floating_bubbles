@@ -7,7 +7,7 @@
 In your flutter project(in pubspec.yaml) add the dependency:
 ```yaml
 dependencies:
-   floating_bubbles: ^1.0.0-nullsafety.0
+   floating_bubbles: ^1.0.0-nullsafety.1
 ```
 
 Import the package:
@@ -37,9 +37,9 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
  ## Parameters:
  | Name | Description | Is It Required | Default Value |
  | :-----------------: | :---------------------------------------------: | :---: | :------: |
- | `noOfBubbles` | No. of Bubbles to be present in the screen at a given Time | **Yes** | `20` |
- | `colorOfBubbles` | Color of the bubbles | **Yes** | `Colors.white.withAlpha(30)` |
- | `sizeFactor` | Size Factor of each bubbles | **Yes** | `0.2` |
+ | `noOfBubbles` | No. of Bubbles to be present in the screen at a given Time | **Yes** | `-` |
+ | `colorOfBubbles` | Color of the bubbles | **Yes** | `-` |
+ | `sizeFactor` | Size Factor of each bubbles | **Yes** | `-` |
  
  ## Example
  The code for the Example shown below is [here](https://pub.dev/packages/floating_bubbles/example).
