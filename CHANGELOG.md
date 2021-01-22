@@ -1,3 +1,7 @@
+## [0.0.6] - 22 January 2021
+
+* **Fix**: Fixed Code Refactoring
+
 ## [0.0.5] - 22 January 2021
 
 * **Fix**: Fixed assertion conditions for all the apis.
