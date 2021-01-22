@@ -33,8 +33,8 @@ class FloatingBubbles extends StatefulWidget {
           'Number of Bubbles Cannot be less than 10',
         ),
         assert(
-          sizeFactor > 0 || sizeFactor < 0.5,
-          'Size factor cannot be greater than 0.5 or less than 1',
+          sizeFactor > 0 && sizeFactor < 0.5,
+          'Size factor cannot be greater than 0.5 or less than 0',
         );
 
   @override
