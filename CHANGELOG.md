@@ -1,3 +1,15 @@
+## [1.0.0-nullsafety.1] - 22 January 2021
+
+* **New**: Nullsafety migration based on version 0.0.5
+
+
+## [0.0.5] - 22 January 2021
+
+* **Fix**: Fixed assertion conditions for all the apis.
+* **Fix**: Removed unnecessary default assignments to the parameters.
+* **Add**: some changes in the documentation for the api.
+
+
 ## [1.0.0-nullsafety.0] - 19 January 2021
 
 * **New**: Nullsafety migration based on version 0.0.4
