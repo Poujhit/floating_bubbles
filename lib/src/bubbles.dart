@@ -21,6 +21,12 @@ class FloatingBubbles extends StatefulWidget {
   /// Typically it should be > 0 and < 0.5. Otherwise the bubble size will be too large.
   final double sizeFactor;
 
+  /// Number of [Seconds] the animation needs to draw on the screen.
+  /// [duration] is has [initial] value as zero.
+  /// When [duration] is [0], the animation is [loop] animation.
+  /// When [duration]is >[0]. the animation plays only for [duration] seconds.
+  final int duration;
+
   /// Creates Floating Bubbles in the Foreground to Any widgets.
   ///
   /// All Fields Are Required to make a new [Instance] of Bubbles.
@@ -28,7 +34,8 @@ class FloatingBubbles extends StatefulWidget {
     required this.noOfBubbles,
     required this.colorOfBubbles,
     required this.sizeFactor,
-  })   : assert(
+    this.duration = 0,
+  })  : assert(
           noOfBubbles > 10,
           'Number of Bubbles Cannot be less than 10',
         ),
