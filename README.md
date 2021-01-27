@@ -7,7 +7,7 @@
 In your flutter project(in pubspec.yaml) add the dependency:
 ```yaml
 dependencies:
-   floating_bubbles: ^1.0.0-nullsafety.1
+   floating_bubbles: ^2.0.0-nullsafety.0
 ```
 
 Import the package:
@@ -17,6 +17,7 @@ import 'package:floating_bubbles/floating_bubbles.dart';
 ```
 
 ## Usage
+**This Package is NUll Safety supported.**
 Here is an snippet on how to use Floating Bubbles to any Widget.
 ```dart
  return Stack(
@@ -31,6 +32,7 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
          noOfBubbles: 25,
          colorOfBubbles: Colors.green.withAlpha(30),
          sizeFactor: 0.16,
+         duration: 120, //if this value is zero then the animation keeps playing forever.
     ),
  );
  ``` 
@@ -40,6 +42,7 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
  | `noOfBubbles` | No. of Bubbles to be present in the screen at a given Time | **Yes** | `-` |
  | `colorOfBubbles` | Color of the bubbles | **Yes** | `-` |
  | `sizeFactor` | Size Factor of each bubbles | **Yes** | `-` |
+ | `duration` | Duration to play the animation (input is taken as seconds) | **No** | `0` |
  
  ## Example
  The code for the Example shown below is [here](https://pub.dev/packages/floating_bubbles/example).
