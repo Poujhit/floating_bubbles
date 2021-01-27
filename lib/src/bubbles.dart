@@ -96,7 +96,9 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
             },
           )
         : PlayAnimation(
-            duration: checkToStopAnimation == 0 ? Duration(seconds: widget.duration) : Duration.zero,
+            duration: checkToStopAnimation == 0
+                ? Duration(seconds: widget.duration)
+                : Duration.zero,
             tween: ConstantTween(1),
             builder: (context, child, value) {
               _simulateBubbles();
