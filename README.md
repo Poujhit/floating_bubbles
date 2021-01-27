@@ -52,10 +52,12 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
  </p>
 
  ## About Me
- - [My Works](https://github.com/Poujhit)
- Suggestions are Welcome. Any issues just open an issue. I will reach you as soon as possible.
+ - [My Other Works](https://github.com/Poujhit)
 
  ## Support
  Give a ⭐/👍 if you liked the work!! :)
- 
+ Suggestions are Welcome. Any issues just open an issue. I will reach you as soon as possible.
 
+ ## License
+ The Scripts and Documentation in this project are released under the [MIT License](https://github.com/Poujhit/floating_bubbles/blob/master/LICENSE)
+ 
