@@ -43,7 +43,8 @@ class FloatingBubbles extends StatefulWidget {
         assert(
           sizeFactor > 0 && sizeFactor < 0.5,
           'Size factor cannot be greater than 0.5 or less than 0',
-        );
+        ),
+        assert(duration >= 0);
 
   @override
   _FloatingBubblesState createState() => _FloatingBubblesState();
