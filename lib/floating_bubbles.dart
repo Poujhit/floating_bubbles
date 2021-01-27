@@ -6,7 +6,7 @@
 /// For Example
 ///
 /// ```
-///   Stack(
+///  return Stack(
 ///     children: [
 ///      Positioned.fill(
 ///         child: Container(
@@ -18,6 +18,8 @@
 ///          noOfBubbles: 20,
 ///          colorOfBubbles: Colors.white.withAlpha(30),
 ///          sizeFactor: 0.2,
+///          duration: 360, //if this value is zero then the animation keeps playing forever.
+///
 ///     ),
 ///  );
 /// ```
