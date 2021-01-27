@@ -17,7 +17,7 @@ import 'package:floating_bubbles/floating_bubbles.dart';
 ```
 
 ## Usage
-**This Package is NUll Safety supported.**
+**This Package is NUll Safety supported.**\
 Here is an snippet on how to use Floating Bubbles to any Widget.
 ```dart
  return Stack(
