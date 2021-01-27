@@ -1,3 +1,11 @@
+## [0.0.7] - 27 January 2021
+
+* **New**: Added Option to play the animation for a particular *duration*.
+* **Update**: Refactored the documentation.
+* **New**: Added Option to choose whether the animation should be *loop* or *one* time for a
+particular *duration*.
+* **Update**: Dependencies used in the project are updated.
+
 ## [0.0.6] - 22 January 2021
 
 * **Fix**: Fixed Code Refactoring
