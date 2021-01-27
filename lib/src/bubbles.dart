@@ -86,7 +86,7 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
   Widget build(BuildContext context) {
     /// Creates a Loop Animation of Bubbles that float around the screen from bottom to top.
     /// If [duration] is 0, then the animation loops itself again and again.
-    /// IF[duration] is not 0, then the animation plays till the duration and stops.
+    /// If [duration] is not 0, then the animation plays till the duration and stops.
     return widget.duration == 0
         ? LoopAnimation(
             tween: ConstantTween(1),
