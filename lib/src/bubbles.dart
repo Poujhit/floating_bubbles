@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
@@ -52,6 +53,10 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
   /// Creating a Random object.
   final Random random = Random();
 
+  ///if [this] value is 0, animation is played, else animation is stopped.
+  ///Value of this is never changed when the duration is zero.
+  int checkToStopAnimation = 0;
+
   /// initialises a empty list of bubbles.
   final List<BubbleFloatingAnimation> bubbles = [];
 
@@ -60,25 +65,52 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
     for (int i = 0; i < widget.noOfBubbles; i++) {
       bubbles.add(BubbleFloatingAnimation(random));
     }
+    if (widget.duration != 0)
+      Timer(Duration(seconds: widget.duration), () {
+        setState(() {
+          checkToStopAnimation = 1;
+        });
+      });
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     /// Creates a Loop Animation of Bubbles that float around the screen from bottom to top.
-    return LoopAnimation(
-      tween: ConstantTween(1),
-      builder: (context, child, int _) {
-        _simulateBubbles();
-        return CustomPaint(
-          painter: BubbleModel(
-            bubbles: bubbles,
-            color: widget.colorOfBubbles,
-            sizeFactor: widget.sizeFactor,
-          ),
-        );
-      },
-    );
+    /// /// If [duration] is 0, then the animation loops itself again and again.
+    /// If [duration] is not 0, then the animation plays till the duration and stops.
+    return widget.duration == 0
+        ? LoopAnimation(
+            tween: ConstantTween(1),
+            builder: (context, child, value) {
+              _simulateBubbles();
+
+              return CustomPaint(
+                painter: BubbleModel(
+                  bubbles: bubbles,
+                  color: widget.colorOfBubbles,
+                  sizeFactor: widget.sizeFactor,
+                ),
+              );
+            },
+          )
+        : PlayAnimation(
+            duration: checkToStopAnimation == 0 ? Duration(seconds: widget.duration) : Duration.zero,
+            tween: ConstantTween(1),
+            builder: (context, child, value) {
+              _simulateBubbles();
+              if (checkToStopAnimation == 0)
+                return CustomPaint(
+                  painter: BubbleModel(
+                    bubbles: bubbles,
+                    color: widget.colorOfBubbles,
+                    sizeFactor: widget.sizeFactor,
+                  ),
+                );
+              else
+                return Container();
+            },
+          );
   }
 
   /// This Function checks whether the bubbles in the screen have to be restarted due to
