@@ -17,7 +17,7 @@ import 'package:floating_bubbles/floating_bubbles.dart';
 ```
 
 ## Usage
-## Breaking Changes to the Api is made in v0.0.8, if you are using below v0.0.8, read before you upgrade.!!
+### Breaking Changes to the Api is made in v0.0.8, if you are using below v0.0.8, read before you upgrade.!!
 
 Here is an snippet on how to use Floating Bubbles to any Widget.
 ### Creating FloatingBubbles() (this creates the animation and plays for amount of time you give as the duration.)
