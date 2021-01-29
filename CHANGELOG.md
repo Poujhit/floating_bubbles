@@ -1,3 +1,8 @@
+## [0.0.9] - 29 January 2021
+* Many Breaking Changes are made in v0.0.8 release. So read the docs!!.
+* **Fix**: Code is Refactored.
+* **Doc**: Readme is updated.
+
 ## [0.0.8] - 29 January 2021
 * Many Breaking Changes are made in this update. So read the docs!!.
 * **New**: Added a named constructor *FloatingBubbles.alwaysRepeating()* which creates the floating bubbles which always floats and doesn't stop.
