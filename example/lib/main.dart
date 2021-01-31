@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      showPerformanceOverlay: true,
       home: Scaffold(
         body: HomePage(),
       ),
@@ -28,11 +29,33 @@ class HomePage extends StatelessWidget {
           ),
         ),
         Positioned.fill(
+          child: FloatingBubbles.alwaysRepeating(
+            noOfBubbles: 40,
+            colorOfBubbles: Colors.white.withAlpha(70),
+            sizeFactor: 0.2,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class HomePage1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        Positioned.fill(
+          child: Container(
+            color: Colors.blue,
+          ),
+        ),
+        Positioned.fill(
           child: FloatingBubbles(
             noOfBubbles: 40,
             colorOfBubbles: Colors.white.withAlpha(70),
             sizeFactor: 0.2,
-            duration: 360, //if this value is zero then the animation keeps playing forever.
+            duration: 120, //120 seconds
           ),
         ),
       ],
