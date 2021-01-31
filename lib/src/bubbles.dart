@@ -7,6 +7,7 @@ import 'package:simple_animations/simple_animations.dart';
 import 'bubble_floating_animation.dart';
 
 /// Creates Floating Bubbles in the Foreground of Any [widgets].
+// ignore: must_be_immutable
 class FloatingBubbles extends StatefulWidget {
   /// Number of Bubbles to be shown per second. Should be [> 10] and not [null].
   final int noOfBubbles;
@@ -23,21 +24,22 @@ class FloatingBubbles extends StatefulWidget {
   final double sizeFactor;
 
   /// Number of [Seconds] the animation needs to draw on the screen.
-  /// [duration] is has [initial] value as zero.
-  /// When [duration] is [0], the animation is [loop] animation.
-  /// When [duration]is >[0]. the animation plays only for [duration] seconds.
-  final int duration;
+  /// If you want the bubbles to be floating always then use the constructor
+  /// `FloatingBubbles.alwaysRepeating()`.
+  int? duration;
 
-  /// Creates Floating Bubbles in the Foreground to Any widgets.
+  /// Creates Floating Bubbles in the Foreground to Any widgets that plays for [duration] amount of time.
   ///
-  /// All Fields Are Required to make a new [Instance] of Bubbles.
+  /// All Fields Are Required to make a new [Instance] of FloatingBubbles.
+  /// If you want the bubbles to be floating always then use the constructor
+  /// `FloatingBubbles.alwaysRepeating()`.
   FloatingBubbles({
     required this.noOfBubbles,
     required this.colorOfBubbles,
     required this.sizeFactor,
-    this.duration = 0,
-  })  : assert(
-          noOfBubbles > 10,
+    required duration,
+  })   : assert(
+          noOfBubbles >= 10,
           'Number of Bubbles Cannot be less than 10',
         ),
         assert(
@@ -45,6 +47,23 @@ class FloatingBubbles extends StatefulWidget {
           'Size factor cannot be greater than 0.5 or less than 0',
         ),
         assert(duration >= 0);
+
+  /// Creates Floating Bubbles that always floats and doesn't stop.
+  /// All Fields Are Required to make a new [Instance] of FloatingBubbles.
+  FloatingBubbles.alwaysRepeating({
+    required this.colorOfBubbles,
+    required this.noOfBubbles,
+    required this.sizeFactor,
+  })   : assert(
+          noOfBubbles >= 10,
+          'Number of Bubbles Cannot be null and not less than 10',
+        ),
+        assert(
+          sizeFactor > 0 && sizeFactor < 0.5,
+          'Size factor cannot be null or greater than 0.5 or less than 0',
+        ) {
+    duration = 0;
+  }
 
   @override
   _FloatingBubblesState createState() => _FloatingBubblesState();
@@ -67,7 +86,7 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
       bubbles.add(BubbleFloatingAnimation(random));
     }
     if (widget.duration != 0)
-      Timer(Duration(seconds: widget.duration), () {
+      Timer(Duration(seconds: widget.duration!), () {
         setState(() {
           checkToStopAnimation = 1;
         });
@@ -96,9 +115,7 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
             },
           )
         : PlayAnimation(
-            duration: checkToStopAnimation == 0
-                ? Duration(seconds: widget.duration)
-                : Duration.zero,
+            duration: checkToStopAnimation == 0 ? Duration(seconds: widget.duration!) : Duration.zero,
             tween: ConstantTween(1),
             builder: (context, child, value) {
               _simulateBubbles();
