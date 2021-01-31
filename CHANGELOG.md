@@ -1,3 +1,21 @@
+## [2.0.0-nullsafety.1] - 31 January 2021
+
+* **New**: Nullsafety migration based on version 0.0.9
+
+## [0.0.9] - 29 January 2021
+* Many Breaking Changes are made in v0.0.8 release. So read the docs!!.
+* **Fix**: Code is Refactored.
+* **Doc**: Readme is updated.
+
+## [0.0.8] - 29 January 2021
+* Many Breaking Changes are made in this update. So read the docs!!.
+* **New**: Added a named constructor *FloatingBubbles.alwaysRepeating()* which creates the floating bubbles which always floats and doesn't stop.
+* **Fix and New**: FloatingBubbles() instance always needs *duration* parameter. FloatingBubbles() now create floating bubbles that float for the *duration* amount of time and stops afterwards.
+* **Update**: Refactored the documentation.
+* **Performance**: Your app can manage upto 200 bubbles at a given instance of time in the screen. More testing is done and performance will improve eventually.
+* **Update**: Readme is updated to the lastest version of this api.
+* **Update**: example/main.dart is updated to the latest version of this api.
+
 ## [2.0.0-nullsafety.0] - 27 January 2021
 
 * **New**: Nullsafety migration based on version 0.0.7
