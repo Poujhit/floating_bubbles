@@ -7,7 +7,7 @@
 In your flutter project(in pubspec.yaml) add the dependency:
 ```yaml
 dependencies:
-   floating_bubbles: ^0.0.9
+   floating_bubbles: ^1.0.0
 ```
 
 Import the package:
@@ -17,7 +17,7 @@ import 'package:floating_bubbles/floating_bubbles.dart';
 ```
 
 ## Usage
-### Breaking Changes to the Api is made in v0.0.8, if you are using below v0.0.8, read before you upgrade.!!
+### Api Reached a Stable version. There won't be any changes to the existing features. Only new Features will be added.
 
 Here is an snippet on how to use Floating Bubbles to any Widget.
 ### Creating FloatingBubbles() (this creates the animation and plays for amount of time you give as the duration.)
@@ -35,6 +35,9 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
          colorOfBubbles: Colors.green.withAlpha(30),
          sizeFactor: 0.16,
          duration: 120,//120 seconds. 
+         opacity: 70,
+         paintingStyle: PaintingStyle.stroke,
+         strokeWidth: 8,
     ),
  );
  ``` 
@@ -53,6 +56,8 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
          noOfBubbles: 25,
          colorOfBubbles: Colors.green.withAlpha(30),
          sizeFactor: 0.16,
+         opacity: 70,
+         paintingStyle: PaintingStyle.fill,
     ),
  );
  ``` 
@@ -65,6 +70,9 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
  | `colorOfBubbles` | Color of the bubbles | **Yes** | `-` |
  | `sizeFactor` | Size Factor of each bubbles | **Yes** | `-` |
  | `duration` | Duration to play the animation (input is taken as seconds) | **Yes** | `-` |
+ | `opacity` | Opacity of the bubbles | **No** | `60` |
+ | `paintingStyle` | Painting Style of the bubbles. | **No** | `PaintingStyle.fill` |
+ | `strokeWidth` | Stroke Width of the bubbles. This value is effective only if `Painting Style` is set to `PaintingStyle.stroke`. | **No** | `0` |
  
  ### For Creating FloatingBubbles.alwaysRepeating()
   | Name | Description | Is It Required | Default Value |
@@ -72,6 +80,9 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
   | `noOfBubbles` | No. of Bubbles to be present in the screen at a given Time | **Yes** | `-` |
   | `colorOfBubbles` | Color of the bubbles | **Yes** | `-` |
   | `sizeFactor` | Size Factor of each bubbles | **Yes** | `-` |
+  | `opacity` | Opacity of the bubbles | **No** | `60` |
+  | `paintingStyle` | Painting Style of the bubbles. | **No** | `PaintingStyle.fill` |
+  | `strokeWidth` | Stroke Width of the bubbles. This value is effective only if `Painting Style` is set to `PaintingStyle.stroke`. | **No** | `0` |
 
  ## Example
  The code for the Example shown below is [here](https://pub.dev/packages/floating_bubbles/example).
