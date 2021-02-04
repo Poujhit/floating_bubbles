@@ -1,4 +1,4 @@
-## [1.0,.0] - 04 February 2021
+## [1.0.0] - 04 February 2021
 * **Api Reached a Stable version. There won't be any changes to the existing features. Only new Features will be added.**
 * **New**: Added feature to add opacity to the bubbles.
 * **New**: Added feature to add Painting Style to the bubbles.
