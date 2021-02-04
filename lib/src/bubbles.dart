@@ -29,6 +29,16 @@ class FloatingBubbles extends StatefulWidget {
   /// `FloatingBubbles.alwaysRepeating()`.
   int duration;
 
+  /// Opacity of the bubbles. Can take the value between 0 to 255.
+  final int opacity;
+
+  /// Painting Style of the bubbles.
+  final PaintingStyle paintingStyle;
+
+  /// Stroke Width of the bubbles. This value is effective only if [Painting Style]
+  /// is set to [PaintingStyle.stroke].
+  final double strokeWidth;
+
   /// Creates Floating Bubbles in the Foreground to Any widgets that plays for [duration] amount of time.
   ///
   /// All Fields Are Required to make a new [Instance] of FloatingBubbles.
@@ -39,6 +49,9 @@ class FloatingBubbles extends StatefulWidget {
     @required this.colorOfBubbles,
     @required this.sizeFactor,
     @required this.duration,
+    this.opacity = 100,
+    this.paintingStyle = PaintingStyle.fill,
+    this.strokeWidth = 0,
   })  : assert(
           noOfBubbles != null && noOfBubbles >= 10,
           'Number of Bubbles Cannot be null and not less than 10',
@@ -53,6 +66,18 @@ class FloatingBubbles extends StatefulWidget {
         ),
         assert(
           duration >= 0 && duration != null,
+        ),
+        assert(
+          paintingStyle != null,
+          'paintingStyle of the bubble cannot be null',
+        ),
+        assert(
+          opacity >= 0 && opacity <= 255 && opacity != null,
+          'opacity of the bubble cannot be null and it\'s value should be between 0 and 255 inclusive.',
+        ),
+        assert(
+          strokeWidth != null,
+          'strokeWidth of the bubble cannot be null',
         );
 
   /// Creates Floating Bubbles that always floats and doesn't stop.
@@ -61,6 +86,9 @@ class FloatingBubbles extends StatefulWidget {
     @required this.noOfBubbles,
     @required this.colorOfBubbles,
     @required this.sizeFactor,
+    this.opacity = 60,
+    this.paintingStyle = PaintingStyle.fill,
+    this.strokeWidth = 0,
   })  : assert(
           noOfBubbles != null && noOfBubbles >= 10,
           'Number of Bubbles Cannot be null and not less than 10',
@@ -72,6 +100,18 @@ class FloatingBubbles extends StatefulWidget {
         assert(
           sizeFactor != null && sizeFactor > 0 && sizeFactor < 0.5,
           'Size factor cannot be null or greater than 0.5 or less than 0',
+        ),
+        assert(
+          paintingStyle != null,
+          'paintingStyle of the bubble cannot be null',
+        ),
+        assert(
+          opacity >= 0 && opacity <= 255 && opacity != null,
+          'opacity of the bubble cannot be null and it\'s value should be between 0 and 255 inclusive.',
+        ),
+        assert(
+          strokeWidth != null,
+          'strokeWidth of the bubble cannot be null',
         ) {
     duration = 0;
   }
@@ -121,14 +161,15 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
                   bubbles: bubbles,
                   color: widget.colorOfBubbles,
                   sizeFactor: widget.sizeFactor,
+                  opacity: widget.opacity,
+                  paintingStyle: widget.paintingStyle,
+                  strokeWidth: widget.strokeWidth,
                 ),
               );
             },
           )
         : PlayAnimation(
-            duration: checkToStopAnimation == 0
-                ? Duration(seconds: widget.duration)
-                : Duration.zero,
+            duration: checkToStopAnimation == 0 ? Duration(seconds: widget.duration) : Duration.zero,
             tween: ConstantTween(1),
             builder: (context, child, value) {
               _simulateBubbles();
@@ -138,6 +179,9 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
                     bubbles: bubbles,
                     color: widget.colorOfBubbles,
                     sizeFactor: widget.sizeFactor,
+                    opacity: widget.opacity,
+                    paintingStyle: widget.paintingStyle,
+                    strokeWidth: widget.strokeWidth,
                   ),
                 );
               else
