@@ -30,8 +30,10 @@ class HomePage extends StatelessWidget {
         Positioned.fill(
           child: FloatingBubbles.alwaysRepeating(
             noOfBubbles: 40,
-            colorOfBubbles: Colors.white.withAlpha(70),
+            colorOfBubbles: Colors.white,
             sizeFactor: 0.2,
+            opacity: 70,
+            paintingStyle: PaintingStyle.fill,
           ),
         ),
       ],
@@ -52,9 +54,12 @@ class HomePage1 extends StatelessWidget {
         Positioned.fill(
           child: FloatingBubbles(
             noOfBubbles: 40,
-            colorOfBubbles: Colors.white.withAlpha(70),
+            colorOfBubbles: Colors.white,
             sizeFactor: 0.2,
             duration: 120, //120 seconds
+            opacity: 70,
+            paintingStyle: PaintingStyle.stroke,
+            strokeWidth: 8,
           ),
         ),
       ],
