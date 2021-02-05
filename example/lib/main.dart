@@ -29,10 +29,14 @@ class HomePage extends StatelessWidget {
           ),
         ),
         Positioned.fill(
-          child: FloatingBubbles.alwaysRepeating(
-            noOfBubbles: 40,
-            colorOfBubbles: Colors.white.withAlpha(70),
-            sizeFactor: 0.2,
+          child: FloatingBubbles(
+            noOfBubbles: 25,
+            colorOfBubbles: Colors.white,
+            sizeFactor: 0.16,
+            duration: 120, //120 seconds.
+            opacity: 70,
+            paintingStyle: PaintingStyle.stroke,
+            strokeWidth: 8,
           ),
         ),
       ],
@@ -51,11 +55,12 @@ class HomePage1 extends StatelessWidget {
           ),
         ),
         Positioned.fill(
-          child: FloatingBubbles(
-            noOfBubbles: 40,
-            colorOfBubbles: Colors.white.withAlpha(70),
-            sizeFactor: 0.2,
-            duration: 120, //120 seconds
+          child: FloatingBubbles.alwaysRepeating(
+            noOfBubbles: 25,
+            colorOfBubbles: Colors.green.withAlpha(30),
+            sizeFactor: 0.16,
+            opacity: 70,
+            paintingStyle: PaintingStyle.fill,
           ),
         ),
       ],
