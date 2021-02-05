@@ -1,3 +1,13 @@
+## [2.0.0-nullsafety.2] - 05 February 2021
+* **New**: Nullsafety migration based on version 1.0.0
+
+## [1.0.0] - 04 February 2021
+* **Api Reached a Stable version. There won't be any changes to the existing features. Only new Features will be added.**
+* **New**: Added feature to add opacity to the bubbles.
+* **New**: Added feature to add Painting Style to the bubbles.
+* **New**: Stroke Width can be added to the bubbles.
+* **Fix**: Certain assertions are fixed and modified.
+
 ## [2.0.0-nullsafety.1] - 31 January 2021
 * **New**: Nullsafety migration based on version 0.0.9
 
