@@ -28,17 +28,31 @@ class FloatingBubbles extends StatefulWidget {
   /// `FloatingBubbles.alwaysRepeating()`.
   int? duration;
 
+  /// Opacity of the bubbles. Can take the value between 0 to 255.
+  final int opacity;
+
+  /// Painting Style of the bubbles.
+  final PaintingStyle paintingStyle;
+
+  /// Stroke Width of the bubbles. This value is effective only if [Painting Style]
+  /// is set to [PaintingStyle.stroke].
+  final double strokeWidth;
+
   /// Creates Floating Bubbles in the Foreground to Any widgets that plays for [duration] amount of time.
   ///
   /// All Fields Are Required to make a new [Instance] of FloatingBubbles.
   /// If you want the bubbles to be floating always then use the constructor
   /// `FloatingBubbles.alwaysRepeating()`.
-  FloatingBubbles({
-    required this.noOfBubbles,
-    required this.colorOfBubbles,
-    required this.sizeFactor,
-    required duration,
-  })   : assert(
+  FloatingBubbles(
+      {required this.noOfBubbles,
+      required this.colorOfBubbles,
+      required this.sizeFactor,
+      required this.duration,
+      this.opacity = 60,
+      this.paintingStyle = PaintingStyle.fill,
+      this.strokeWidth = 0,
+      required})
+      : assert(
           noOfBubbles >= 10,
           'Number of Bubbles Cannot be less than 10',
         ),
@@ -46,7 +60,7 @@ class FloatingBubbles extends StatefulWidget {
           sizeFactor > 0 && sizeFactor < 0.5,
           'Size factor cannot be greater than 0.5 or less than 0',
         ),
-        assert(duration >= 0);
+        assert(duration != null && duration >= 0);
 
   /// Creates Floating Bubbles that always floats and doesn't stop.
   /// All Fields Are Required to make a new [Instance] of FloatingBubbles.
@@ -54,7 +68,10 @@ class FloatingBubbles extends StatefulWidget {
     required this.colorOfBubbles,
     required this.noOfBubbles,
     required this.sizeFactor,
-  })   : assert(
+    this.opacity = 60,
+    this.paintingStyle = PaintingStyle.fill,
+    this.strokeWidth = 0,
+  })  : assert(
           noOfBubbles >= 10,
           'Number of Bubbles Cannot be null and not less than 10',
         ),
@@ -110,14 +127,15 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
                   bubbles: bubbles,
                   color: widget.colorOfBubbles,
                   sizeFactor: widget.sizeFactor,
+                  opacity: widget.opacity,
+                  paintingStyle: widget.paintingStyle,
+                  strokeWidth: widget.strokeWidth,
                 ),
               );
             },
           )
         : PlayAnimation(
-            duration: checkToStopAnimation == 0
-                ? Duration(seconds: widget.duration!)
-                : Duration.zero,
+            duration: checkToStopAnimation == 0 ? Duration(seconds: widget.duration!) : Duration.zero,
             tween: ConstantTween(1),
             builder: (context, child, value) {
               _simulateBubbles();
@@ -127,6 +145,9 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
                     bubbles: bubbles,
                     color: widget.colorOfBubbles,
                     sizeFactor: widget.sizeFactor,
+                    opacity: widget.opacity,
+                    paintingStyle: widget.paintingStyle,
+                    strokeWidth: widget.strokeWidth,
                   ),
                 );
               else

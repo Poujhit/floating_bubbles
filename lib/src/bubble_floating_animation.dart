@@ -20,7 +20,7 @@ class BubbleFloatingAnimation {
   late Duration startTime;
 
   /// Random object.
-  Random random;
+  final Random random;
 
   BubbleFloatingAnimation(this.random) {
     _restart();
@@ -74,8 +74,7 @@ class BubbleFloatingAnimation {
   /// Shuffles the position of bubbles around the screen.
   void _shuffle() {
     startTime -= Duration(
-      milliseconds:
-          (this.random.nextDouble() * duration.inMilliseconds).round(),
+      milliseconds: (this.random.nextDouble() * duration.inMilliseconds).round(),
     );
   }
 
@@ -103,13 +102,23 @@ class BubbleFloatingAnimation {
 /// This Class paints the bubble in the screen.
 class BubbleModel extends CustomPainter {
   /// List of all bubbles in the screen at a given time.
-  List<BubbleFloatingAnimation> bubbles;
+  final List<BubbleFloatingAnimation> bubbles;
 
   /// Color of the bubble.
-  Color color;
+  final Color color;
 
   /// Size factor of the bubble.
-  double sizeFactor;
+  final double sizeFactor;
+
+  /// Opacity of the bubbles.
+  final int opacity;
+
+  ///Painting Style of the bubbles.
+  final PaintingStyle paintingStyle;
+
+  /// Stroke Width of the bubbles. This value is effective only if [Painting Style]
+  /// is set to [PaintingStyle.stroke].
+  final double strokeWidth;
 
   /// This Class paints the bubble in the screen.
   ///
@@ -118,12 +127,18 @@ class BubbleModel extends CustomPainter {
     required this.bubbles,
     required this.color,
     required this.sizeFactor,
+    required this.opacity,
+    required this.paintingStyle,
+    required this.strokeWidth,
   });
 
   /// Painting the bubbles in the screen.
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint()..color = color;
+    final paint = Paint()
+      ..color = color.withAlpha(opacity)
+      ..style = paintingStyle
+      ..strokeWidth = strokeWidth; //can be from 5 to 15.
 
     bubbles.forEach((particle) {
       final progress = particle.progress();
