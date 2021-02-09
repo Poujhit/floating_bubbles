@@ -1,3 +1,7 @@
+## [1.1.3] - 09 February 2021
+
+* **Fix**: Bug Fixes.
+
 ## [1.1.2] - 09 February 2021
 
 * **New**: Stress test was done on the animation and results are in [readme](https://github.com/Poujhit/floating_bubbles#stress-test).
