@@ -113,7 +113,7 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
  <img src="./screenshots/fps_test_release.png">
  </p>
 
-  ### Average FPS of the UI when the package was stress tested on a low-end Android Phone
+  ### Average FPS of the UI when the package was stress tested on a High-end Android Phone
 
  APP build in **Release Mode**
  <p align = "middle">
