@@ -1,4 +1,10 @@
+## [1.1.2] - 09 February 2021
+
+* **New**: Stress test was done on the animation and results are in [readme](https://github.com/Poujhit/floating_bubbles#stress-test).
+* **Update**: updated example main.dart, stress test code included.
+
 ## [1.0.0] - 04 February 2021
+
 * **Api Reached a Stable version. There won't be any changes to the existing features. Only new Features will be added.**
 * **New**: Added feature to add opacity to the bubbles.
 * **New**: Added feature to add Painting Style to the bubbles.
@@ -6,11 +12,13 @@
 * **Fix**: Certain assertions are fixed and modified.
 
 ## [0.0.9] - 29 January 2021
+
 * Many Breaking Changes are made in v0.0.8 release. So read the docs!!.
 * **Fix**: Code is Refactored.
 * **Doc**: Readme is updated.
 
 ## [0.0.8] - 29 January 2021
+
 * Many Breaking Changes are made in this update. So read the docs!!.
 * **New**: Added a named constructor *FloatingBubbles.alwaysRepeating()* which creates the floating bubbles which always floats and doesn't stop.
 * **Fix and New**: FloatingBubbles() instance always needs *duration* parameter. FloatingBubbles() now create floating bubbles that float for the *duration* amount of time and stops afterwards.
