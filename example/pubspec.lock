@@ -98,7 +98,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "2.0.0-nullsafety.2"
+    version: "2.0.0-nullsafety.3"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -119,6 +119,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  graphs:
+    dependency: transitive
+    description:
+      name: graphs
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0"
   integration_test:
     dependency: "direct dev"
     description: flutter
@@ -166,6 +173,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.0-nullsafety.4"
+  rive:
+    dependency: "direct main"
+    description:
+      name: rive
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.7"
   simple_animations:
     dependency: transitive
     description:
