@@ -7,7 +7,7 @@
 In your flutter project(in pubspec.yaml) add the dependency:
 ```yaml
 dependencies:
-   floating_bubbles: ^2.0.0-nullsafety.2
+   floating_bubbles: ^2.0.0-nullsafety.3
 ```
 
 Import the package:
@@ -89,8 +89,39 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
  The code for the Example shown below is [here](https://pub.dev/packages/floating_bubbles/example).
 
  <p align = "middle">
- <img src="https://raw.githubusercontent.com/Poujhit/floating_bubbles/master/screenshots/video.gif" width="320" height = "650">
+ <img src="https://raw.githubusercontent.com/Poujhit/floating_bubbles/master/screenshots/example1.gif" width="320" height = "650">
  </p>
+
+ <p align = "middle">
+ <img src="https://raw.githubusercontent.com/Poujhit/floating_bubbles/master/screenshots/example2.gif" width="320" height = "650">
+ </p>
+
+ As the Gifs here are converted from mp4, there are some stutters. To see the MP4 format of these Gifs
+ Click [Here](https://drive.google.com/drive/folders/1lcsvxsMmNlD74k0ctHA7Nd-ZtSnTvAy6?usp=sharing).
+
+ ## Stress Test
+ Stress Test has been done on this package. Below is the information(fps) on how the performance of the package when the animation was coupled with a heavy rive animation.
+
+ ### Average FPS of the UI when the package was stress tested on a low-end Android Phone
+
+ APP build in **Debug Mode**
+ <p align = "middle">
+ <img src="https://raw.githubusercontent.com/Poujhit/floating_bubbles/master/screenshots/fps_test.png">
+ </p>
+
+ APP build in **Release Mode**
+ <p align = "middle">
+ <img src="https://raw.githubusercontent.com/Poujhit/floating_bubbles/master/screenshots/fps_test_release.png">
+ </p>
+
+  ### Average FPS of the UI when the package was stress tested on a High-end Android Phone
+
+ APP build in **Release Mode**
+ <p align = "middle">
+ <img src="https://raw.githubusercontent.com/Poujhit/floating_bubbles/master/screenshots/fps_test_power_phone_release.png">
+ </p>
+
+ Performance improvements will be made in the coming updates to make this package more suitable for low end devices. If you have any suggestions or ideas, just pull request :)
 
  ## About Me
  - [My Other Works](https://github.com/Poujhit)
