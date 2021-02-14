@@ -1,3 +1,7 @@
+## [1.2.0] - 14 February 2021
+
+* **Fix**: Bug Fixes.
+
 ## [1.1.3] - 09 February 2021
 
 * **Fix**: Bug Fixes.
