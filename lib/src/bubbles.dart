@@ -42,7 +42,7 @@ class FloatingBubbles extends StatefulWidget {
   /// is set to [PaintingStyle.stroke].
   final double strokeWidth;
 
-  /// Shape of the Bubble. Default value is [Shape.circle]
+  /// Shape of the Bubble. Default value is [BubbleShape.circle]
   final BubbleShape shape;
 
   /// Creates Floating Bubbles in the Foreground to Any widgets that plays for [duration] amount of time.
