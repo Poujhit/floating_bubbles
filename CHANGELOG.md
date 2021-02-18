@@ -1,3 +1,16 @@
+## [2.0.0-nullsafety.4] - 18 February 2021
+
+* **New**: Null Safety migration based on version 1.3.1
+
+## [1.3.1] - 18 February 2021
+
+* **New**: Bubbles shape can be changed to circle or square now.
+* **New**: Fixed some critical bugs.
+
+## [1.2.0] - 14 February 2021
+
+* **Fix**: Bug Fixes.
+
 ## [2.0.0-nullsafety.3] - 10 February 2021
 
 * **New**: Nullsafety migration based on version 1.1.3
