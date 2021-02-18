@@ -76,10 +76,11 @@ class _LoginScreenState extends State<LoginScreen> {
             child: FloatingBubbles.alwaysRepeating(
               noOfBubbles: 40,
               colorOfBubbles: Colors.redAccent,
-              sizeFactor: 0.2,
+              sizeFactor: 0.15,
               opacity: 200,
               strokeWidth: 10,
               paintingStyle: PaintingStyle.stroke,
+              shape: BubbleShape.square,
             ),
           ),
           Positioned(
@@ -147,24 +148,25 @@ class _LoginScreenState extends State<LoginScreen> {
 // class HomePage extends StatelessWidget {
 //   @override
 //   Widget build(BuildContext context) {
-//     return Stack(
-//       children: [
-//         Positioned.fill(
-//           child: Container(
-//             color: Colors.blue,
-//           ),
-//         ),
-//         Positioned.fill(
-//           child: FloatingBubbles.alwaysRepeating(
-//             noOfBubbles: 40,
-//             colorOfBubbles: Colors.white,
-//             sizeFactor: 0.2,
-//             opacity: 70,
-//             paintingStyle: PaintingStyle.fill,
-//           ),
-//         ),
-//       ],
-//     );
+    // return Stack(
+    //   children: [
+    //     Positioned.fill(
+    //       child: Container(
+    //         color: Colors.blue,
+    //       ),
+    //     ),
+    //     Positioned.fill(
+    //       child: FloatingBubbles.alwaysRepeating(
+    //         noOfBubbles: 40,
+    //         colorOfBubbles: Colors.white,
+    //         sizeFactor: 0.2,
+    //         opacity: 70,
+    //         paintingStyle: PaintingStyle.fill,
+    //         shape: BubbleShape.circle, //This is the default
+    //       ),
+    //     ),
+    //   ],
+    // );
 //   }
 // }
 
@@ -187,6 +189,7 @@ class _LoginScreenState extends State<LoginScreen> {
 //             opacity: 70,
 //             paintingStyle: PaintingStyle.stroke,
 //             strokeWidth: 8,
+//             shape: BubbleShape.square,
 //           ),
 //         ),
 //       ],
