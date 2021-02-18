@@ -7,7 +7,7 @@
 In your flutter project(in pubspec.yaml) add the dependency:
 ```yaml
 dependencies:
-   floating_bubbles: ^2.0.0-nullsafety.3
+   floating_bubbles: ^2.0.0-nullsafety.4
 ```
 
 Import the package:
@@ -33,10 +33,11 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
          noOfBubbles: 25,
          colorOfBubbles: Colors.green.withAlpha(30),
          sizeFactor: 0.16,
-         duration: 120,//120 seconds. 
+         duration: 120, //120 seconds. 
          opacity: 70,
          paintingStyle: PaintingStyle.stroke,
          strokeWidth: 8,
+         shape: BubbleShape.circle, //circle is the default. No need to explicitly mention if its a circle.
     ),
  );
  ``` 
@@ -44,21 +45,22 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
  ### Creating FloatingBubbles.alwaysRepeating() (Creates Floating Bubbles that always floats and doesn't stop.)
  ```dart
  return Stack(
-   children: [
-    Positioned.fill(
-       child: Container(
-       color: Colors.red,
+    children: [
+     Positioned.fill(
+        child: Container(
+        color: Colors.red,
+      ),
      ),
+     Positioned.fill(
+         child: FloatingBubbles.alwaysRepeating(
+         noOfBubbles: 25,
+         colorOfBubbles: Colors.green.withAlpha(30),
+         sizeFactor: 0.16,
+         opacity: 70,
+         paintingStyle: PaintingStyle.fill,
+         shape: BubbleShape.square,
     ),
-    Positioned.fill(
-        child: FloatingBubbles.alwaysRepeating(
-        noOfBubbles: 25,
-        colorOfBubbles: Colors.green.withAlpha(30),
-        sizeFactor: 0.16,
-        opacity: 70,
-        paintingStyle: PaintingStyle.fill,
-   ),
-);
+ );
  ``` 
    
  ## Parameters:
@@ -72,8 +74,9 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
  | `opacity` | Opacity of the bubbles | **No** | `60` |
  | `paintingStyle` | Painting Style of the bubbles. | **No** | `PaintingStyle.fill` |
  | `strokeWidth` | Stroke Width of the bubbles. This value is effective only if `Painting Style` is set to `PaintingStyle.stroke`. | **No** | `0` |
+ | `shape` | Shape of the bubbles. | **No** | `BubbleShape.circle` |
  
-
+ 
  ### For Creating FloatingBubbles.alwaysRepeating()
   | Name | Description | Is It Required | Default Value |
   | :-----------------: | :---------------------------------------------: | :---: | :------: |
@@ -83,6 +86,7 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
   | `opacity` | Opacity of the bubbles | **No** | `60` |
   | `paintingStyle` | Painting Style of the bubbles. | **No** | `PaintingStyle.fill` |
   | `strokeWidth` | Stroke Width of the bubbles. This value is effective only if `Painting Style` is set to `PaintingStyle.stroke`. | **No** | `0` |
+  | `shape` | Shape of the bubbles. | **No** | `BubbleShape.circle` |
 
  
  ## Example
