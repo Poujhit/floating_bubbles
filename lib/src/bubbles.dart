@@ -6,6 +6,9 @@ import 'package:simple_animations/simple_animations.dart';
 
 import 'bubble_floating_animation.dart';
 
+///Enum for Setting the Shape of the bubble
+enum BubbleShape { circle, square }
+
 /// Creates Floating Bubbles in the Foreground of Any [widgets].
 // ignore: must_be_immutable
 class FloatingBubbles extends StatefulWidget {
@@ -39,6 +42,9 @@ class FloatingBubbles extends StatefulWidget {
   /// is set to [PaintingStyle.stroke].
   final double strokeWidth;
 
+  /// Shape of the Bubble. Default value is [Shape.circle]
+  final BubbleShape shape;
+
   /// Creates Floating Bubbles in the Foreground to Any widgets that plays for [duration] amount of time.
   ///
   /// All Fields Are Required to make a new [Instance] of FloatingBubbles.
@@ -49,6 +55,7 @@ class FloatingBubbles extends StatefulWidget {
     @required this.colorOfBubbles,
     @required this.sizeFactor,
     @required this.duration,
+    this.shape = BubbleShape.circle,
     this.opacity = 100,
     this.paintingStyle = PaintingStyle.fill,
     this.strokeWidth = 0,
@@ -78,6 +85,10 @@ class FloatingBubbles extends StatefulWidget {
         assert(
           strokeWidth != null,
           'strokeWidth of the bubble cannot be null',
+        ),
+        assert(
+          shape != null,
+          'Shape of the bubble cannot be null',
         );
 
   /// Creates Floating Bubbles that always floats and doesn't stop.
@@ -86,6 +97,7 @@ class FloatingBubbles extends StatefulWidget {
     @required this.noOfBubbles,
     @required this.colorOfBubbles,
     @required this.sizeFactor,
+    this.shape = BubbleShape.circle,
     this.opacity = 60,
     this.paintingStyle = PaintingStyle.fill,
     this.strokeWidth = 0,
@@ -112,6 +124,10 @@ class FloatingBubbles extends StatefulWidget {
         assert(
           strokeWidth != null,
           'strokeWidth of the bubble cannot be null',
+        ),
+        assert(
+          shape != null,
+          'Shape of the bubble cannot be null',
         ) {
     duration = 0;
   }
@@ -164,14 +180,13 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
                   opacity: widget.opacity,
                   paintingStyle: widget.paintingStyle,
                   strokeWidth: widget.strokeWidth,
+                  shape: widget.shape,
                 ),
               );
             },
           )
         : PlayAnimation(
-            duration: checkToStopAnimation == 0
-                ? Duration(seconds: widget.duration)
-                : Duration.zero,
+            duration: checkToStopAnimation == 0 ? Duration(seconds: widget.duration) : Duration.zero,
             tween: ConstantTween(1),
             builder: (context, child, value) {
               _simulateBubbles();
@@ -184,6 +199,7 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
                     opacity: widget.opacity,
                     paintingStyle: widget.paintingStyle,
                     strokeWidth: widget.strokeWidth,
+                    shape: widget.shape,
                   ),
                 );
               else
