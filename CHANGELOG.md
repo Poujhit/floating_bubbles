@@ -1,3 +1,8 @@
+## [1.3.1] - 18 February 2021
+
+* **New**: Bubbles shape can be changed to circle or square now.
+* **New**: Fixed some critical bugs.
+
 ## [1.2.0] - 14 February 2021
 
 * **Fix**: Bug Fixes.
