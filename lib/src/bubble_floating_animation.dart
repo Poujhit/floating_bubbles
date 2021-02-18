@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:simple_animations/simple_animations.dart';
 
+import '../floating_bubbles.dart';
+
 enum _OffsetProps { x, y }
 
 /// This class Creates the animation of the bubbles flowing from bottom to top in the screen.
@@ -74,8 +76,7 @@ class BubbleFloatingAnimation {
   /// Shuffles the position of bubbles around the screen.
   void _shuffle() {
     startTime -= Duration(
-      milliseconds:
-          (this.random.nextDouble() * duration.inMilliseconds).round(),
+      milliseconds: (this.random.nextDouble() * duration.inMilliseconds).round(),
     );
   }
 
@@ -121,6 +122,9 @@ class BubbleModel extends CustomPainter {
   /// is set to [PaintingStyle.stroke].
   final double strokeWidth;
 
+  /// Shape of the Bubble.
+  final BubbleShape shape;
+
   /// This Class paints the bubble in the screen.
   ///
   /// All Fields are Required.
@@ -131,6 +135,7 @@ class BubbleModel extends CustomPainter {
     required this.opacity,
     required this.paintingStyle,
     required this.strokeWidth,
+    required this.shape,
   });
 
   /// Painting the bubbles in the screen.
@@ -148,11 +153,20 @@ class BubbleModel extends CustomPainter {
         animation.get<double>(_OffsetProps.x) * size.width,
         animation.get<double>(_OffsetProps.y) * size.height,
       );
-      canvas.drawCircle(
-        position,
-        size.width * sizeFactor * particle.size,
-        paint,
-      );
+      if (shape == BubbleShape.circle)
+        canvas.drawCircle(
+          position,
+          size.width * sizeFactor * particle.size,
+          paint,
+        );
+      else
+        canvas.drawRect(
+          Rect.fromCircle(
+            center: position,
+            radius: size.width * sizeFactor * particle.size,
+          ),
+          paint,
+        );
     });
   }
 
