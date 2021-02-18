@@ -6,22 +6,25 @@
 /// For Example
 ///
 /// ```
-///  return Stack(
-///     children: [
-///      Positioned.fill(
-///         child: Container(
-///         color: Colors.blue,
+///   return Stack(
+///       children: [
+///         Positioned.fill(
+///           child: Container(
+///           color: Colors.blue,
+///          ),
+///        ),
+///       Positioned.fill(
+///           child: FloatingBubbles.alwaysRepeating(
+///           noOfBubbles: 40,
+///           colorOfBubbles: Colors.white,
+///           sizeFactor: 0.2,
+///           opacity: 70,
+///           paintingStyle: PaintingStyle.fill,
+///           shape: BubbleShape.circle, //This is the default
+///          ),
 ///       ),
-///      ),
-///      Positioned.fill(
-///          child: FloatingBubbles(
-///          noOfBubbles: 20,
-///          colorOfBubbles: Colors.white.withAlpha(30),
-///          sizeFactor: 0.2,
-///          duration: 360, //if this value is zero then the animation keeps playing forever.
-///
-///     ),
-///  );
+///     ],
+///   );
 /// ```
 /// This was made with the help of Simple Animation package.
 library floating_bubbles;
