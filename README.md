@@ -7,7 +7,7 @@
 In your flutter project(in pubspec.yaml) add the dependency:
 ```yaml
 dependencies:
-   floating_bubbles: ^1.3.1
+   floating_bubbles: ^1.4.0
 ```
 
 Import the package:
@@ -15,6 +15,9 @@ Import the package:
 ```dart
 import 'package:floating_bubbles/floating_bubbles.dart';
 ```
+
+
+### Note: For Flutter web, unimplemented error is coming due to shader mask and canvas kit. Workaround is coming soon for the package in the coming versions. Package is not yet tested for Linux, Windows and Mac OS. Checkout the [readme.md](https://github.com/Poujhit/floating_bubbles/blob/master/README.md) where I will put the whether all platform supports this package.
 
 ## Usage
 **Api Reached a Stable version. There won't be any changes to the existing features. Only new Features will be added. This message is for users who are using version v0.0.9 and below.**
