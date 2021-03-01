@@ -1,3 +1,7 @@
+## [1.4.0] - 01 March 2021
+
+* **Fix**: Code Refactored.
+
 ## [1.3.1] - 18 February 2021
 
 * **New**: Bubbles shape can be changed to circle or square now.
