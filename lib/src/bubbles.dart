@@ -161,6 +161,14 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
     super.initState();
   }
 
+  /// Function to paint the bubbles to the screen.
+  /// This is call the paint function in bubbles_floating_animation.dart.
+  CustomPaint drawBubbles({CustomPainter bubbles}) {
+    return CustomPaint(
+      painter: bubbles,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     /// Creates a Loop Animation of Bubbles that float around the screen from bottom to top.
@@ -171,9 +179,8 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
             tween: ConstantTween(1),
             builder: (context, child, value) {
               _simulateBubbles();
-
-              return CustomPaint(
-                painter: BubbleModel(
+              return drawBubbles(
+                bubbles: BubbleModel(
                   bubbles: bubbles,
                   color: widget.colorOfBubbles,
                   sizeFactor: widget.sizeFactor,
@@ -186,15 +193,13 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
             },
           )
         : PlayAnimation(
-            duration: checkToStopAnimation == 0
-                ? Duration(seconds: widget.duration)
-                : Duration.zero,
+            duration: checkToStopAnimation == 0 ? Duration(seconds: widget.duration) : Duration.zero,
             tween: ConstantTween(1),
             builder: (context, child, value) {
               _simulateBubbles();
               if (checkToStopAnimation == 0)
-                return CustomPaint(
-                  painter: BubbleModel(
+                return drawBubbles(
+                  bubbles: BubbleModel(
                     bubbles: bubbles,
                     color: widget.colorOfBubbles,
                     sizeFactor: widget.sizeFactor,
@@ -205,7 +210,7 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
                   ),
                 );
               else
-                return Container();
+                return Container(); // will display a empty container after playing the animations.
             },
           );
   }
