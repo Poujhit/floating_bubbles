@@ -7,7 +7,7 @@
 In your flutter project(in pubspec.yaml) add the dependency:
 ```yaml
 dependencies:
-   floating_bubbles: ^1.4.0
+   floating_bubbles: ^1.6.0
 ```
 
 Import the package:
@@ -16,11 +16,7 @@ Import the package:
 import 'package:floating_bubbles/floating_bubbles.dart';
 ```
 
-
-### Note: For Flutter web, unimplemented error is coming due to shader mask and canvas kit. Workaround is coming soon for the package in the coming versions. Package is not yet tested for Linux, Windows and Mac OS. Checkout the [readme.md](https://github.com/Poujhit/floating_bubbles/blob/master/README.md) where I will put the whether all platform supports this package.
-
 ## Usage
-**Api Reached a Stable version. There won't be any changes to the existing features. Only new Features will be added. This message is for users who are using version v0.0.9 and below.**
 
 Here is an snippet on how to use Floating Bubbles to any Widget.
 ### Creating FloatingBubbles() (this creates the animation and plays for amount of time you give as the duration.)
@@ -104,6 +100,18 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
 
  As the Gifs here are converted from mp4, there are some stutters. To see the MP4 format of these Gifs
  Click [Here](https://drive.google.com/drive/folders/1lcsvxsMmNlD74k0ctHA7Nd-ZtSnTvAy6?usp=sharing).
+
+ ## Platforms on which this package was tested.
+
+ | Platform | Supported | Comments |
+ | :-----------------: | :-----: | :----------------------------------------------------------------: |
+ | `Android` | | **Yes** | | `Works without any issues` |
+ | `IOS` | | **Yes** | | `Works without any issues` |
+ | `Web` | | **Yes (kinda)** | | `Works when using web renderer engine as html. use the command flutter run -d chrome --web-renderer html / flutter build web --web-renderer html ` |
+ | `Windows` | | **Yes** | | `Works without any issues` |
+ | `Linux` | | **Not yet tested** | | `-` |
+ | `MacOS` | | **Not yet tested** | | `-` |
+
 
  ## Stress Test
  Stress Test has been done on this package. Below is the information(fps) on how the performance of the package when the animation was coupled with a heavy rive animation.
