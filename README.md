@@ -104,13 +104,13 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
  ## Platforms on which this package was tested.
 
  | Platform | Supported | Comments |
- | :-----------------: | :-----: | :----------------------------------------------------------------: |
- | `Android` | | **Yes** | | `Works without any issues` |
- | `IOS` | | **Yes** | | `Works without any issues` |
- | `Web` | | **Yes (kinda)** | | `Works when using web renderer engine as html. use the command flutter run -d chrome --web-renderer html / flutter build web --web-renderer html ` |
- | `Windows` | | **Yes** | | `Works without any issues` |
- | `Linux` | | **Not yet tested** | | `-` |
- | `MacOS` | | **Not yet tested** | | `-` |
+ | :-----------------: | :--------------: | :----------------------------------------------------------------: |
+ | `Android` |  **Yes**  | `Works without any issues` |
+ | `IOS` |  **Yes**  | `Works without any issues` |
+ | `Web` |  **Yes (kinda)**  | `Works when using web renderer engine as html. use the command flutter run -d chrome --web-renderer html / flutter build web --web-renderer html ` |
+ | `Windows` |  **Yes**  | `Works without any issues` |
+ | `Linux` |  **Not yet tested**  | `-` |
+ | `MacOS` |  **Not yet tested**  | `-` |
 
 
  ## Stress Test
