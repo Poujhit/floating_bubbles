@@ -1,3 +1,9 @@
+## [1.6.0] - 01 March 2021
+
+* **Fix**: Web support is added and tested. Read the readme.md for more info.
+* **Fix**: Windows support is added and tested.
+* **Fix**: Optimized for Flutter 2.0
+
 ## [1.4.0] - 01 March 2021
 
 * **Fix**: Code Refactored.
