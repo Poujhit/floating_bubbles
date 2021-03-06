@@ -1,4 +1,4 @@
-## [1.6.0] - 01 March 2021
+## [1.6.0] - 06 March 2021
 
 * **Fix**: Web support is added and tested. Read the readme.md for more info.
 * **Fix**: Windows support is added and tested.
