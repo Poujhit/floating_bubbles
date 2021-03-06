@@ -118,8 +118,27 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
     super.initState();
   }
 
+  /// Function to paint the bubbles to the screen.
+  /// This is call the paint function in bubbles_floating_animation.dart.
+  CustomPaint drawBubbles({required CustomPainter bubbles}) {
+    return CustomPaint(
+      painter: bubbles,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    /// Bubble Model Variable
+    var bubbleModel = BubbleModel(
+      bubbles: bubbles,
+      color: widget.colorOfBubbles,
+      sizeFactor: widget.sizeFactor,
+      opacity: widget.opacity,
+      paintingStyle: widget.paintingStyle,
+      strokeWidth: widget.strokeWidth,
+      shape: widget.shape,
+    );
+
     /// Creates a Loop Animation of Bubbles that float around the screen from bottom to top.
     /// /// If [duration] is 0, then the animation loops itself again and again.
     /// If [duration] is not 0, then the animation plays till the duration and stops.
@@ -129,16 +148,8 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
             builder: (context, child, value) {
               _simulateBubbles();
 
-              return CustomPaint(
-                painter: BubbleModel(
-                  bubbles: bubbles,
-                  color: widget.colorOfBubbles,
-                  sizeFactor: widget.sizeFactor,
-                  opacity: widget.opacity,
-                  paintingStyle: widget.paintingStyle,
-                  strokeWidth: widget.strokeWidth,
-                  shape: widget.shape,
-                ),
+              return drawBubbles(
+                bubbles: bubbleModel,
               );
             },
           )
@@ -150,16 +161,8 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
             builder: (context, child, value) {
               _simulateBubbles();
               if (checkToStopAnimation == 0)
-                return CustomPaint(
-                  painter: BubbleModel(
-                    bubbles: bubbles,
-                    color: widget.colorOfBubbles,
-                    sizeFactor: widget.sizeFactor,
-                    opacity: widget.opacity,
-                    paintingStyle: widget.paintingStyle,
-                    strokeWidth: widget.strokeWidth,
-                    shape: widget.shape,
-                  ),
+                return drawBubbles(
+                  bubbles: bubbleModel,
                 );
               else
                 return Container();
