@@ -1,3 +1,17 @@
+## [2.0.0-nullsafety.5] - 06 February 2021
+
+* **New**: Null Safety migration based on version 1.6.0
+
+## [1.6.0] - 06 March 2021
+
+* **Fix**: Web support is added and tested. Read the readme.md for more info.
+* **Fix**: Windows support is added and tested.
+* **Fix**: Optimized for Flutter 2.0
+
+## [1.4.0] - 01 March 2021
+
+* **Fix**: Code Refactored.
+
 ## [2.0.0-nullsafety.4] - 18 February 2021
 
 * **New**: Null Safety migration based on version 1.3.1
