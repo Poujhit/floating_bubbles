@@ -28,7 +28,7 @@ Future<num> nextFrame([num target = 60]) {
 /// ```
 Stream<num> eachFrame({Future<num> animationFrame(): nextFrame}) {
   // ignore: close_sinks
-  StreamController<num> controller;
+  late StreamController<num> controller;
   var cancelled = false;
   void onNext(num timestamp) {
     if (cancelled) return;
@@ -71,16 +71,16 @@ class ComputeFps implements StreamTransformer<num, num> {
   @override
   Stream<num> bind(Stream<num> stream) {
     // ignore: close_sinks
-    StreamController<num> controller;
-    StreamSubscription<num> subscription;
+    late StreamController<num> controller;
+    late StreamSubscription<num> subscription;
     num frameTime = 0;
-    num lastLoop;
+    num? lastLoop;
     controller = new StreamController<num>(
       sync: true,
       onListen: () {
         subscription = stream.listen((thisLoop) {
           if (lastLoop != null) {
-            var thisFrameTime = thisLoop - lastLoop;
+            var thisFrameTime = thisLoop - lastLoop!;
             frameTime += (thisFrameTime - frameTime) / _filterStrength;
             controller.add(math.min(1000 / frameTime, 60));
           }

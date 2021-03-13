@@ -2,6 +2,7 @@ import 'package:example/fps.dart';
 import 'package:floating_bubbles/floating_bubbles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:rive/rive.dart';
 
 void main() {
@@ -24,17 +25,17 @@ class MyApp extends StatelessWidget {
 // This example given below is for stress test of the package.
 // Here I have used a heavy rive animation along with floating_bubbles animation.
 
-//To see a easy example on how to use this package. Scroll down to see the comments.
+//To see an easy example on how to use this package. Scroll down to see the comments.
 class LoginScreen extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  Artboard _riveArtboard;
+  Artboard? _riveArtboard;
   final GlobalKey<FormState> _formKey = GlobalKey();
   // ignore: unused_field
-  RiveAnimationController _controller;
+  late RiveAnimationController _controller;
   @override
   void initState() {
     super.initState();
@@ -112,24 +113,32 @@ class _LoginScreenState extends State<LoginScreen> {
                           SizedBox(
                             height: 20,
                           ),
-                          // ignore: deprecated_member_use
-                          RaisedButton(
-                            child: Text('LOGIN'),
-                            onPressed: () {},
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(30),
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(30),
+                              ),
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 30.0,
+                                vertical: 8.0,
+                              ),
+                              primary: Theme.of(context).primaryColor,
+                              onPrimary: Theme.of(context).primaryTextTheme.button!.color,
                             ),
-                            padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 8.0),
-                            color: Theme.of(context).primaryColor,
-                            textColor: Theme.of(context).primaryTextTheme.button.color,
-                          ),
-                          // ignore: deprecated_member_use
-                          FlatButton(
                             child: Text('LOGIN'),
                             onPressed: () {},
-                            padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 4),
-                            materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                            textColor: Theme.of(context).primaryColor,
+                          ),
+                          TextButton(
+                            style: TextButton.styleFrom(
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 30.0,
+                                vertical: 4,
+                              ),
+                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                              onSurface: Theme.of(context).primaryColor,
+                            ),
+                            child: Text('LOGIN'),
+                            onPressed: () {},
                           ),
                         ],
                       ),
