@@ -14,5 +14,3 @@ Please note we have a code of conduct, please follow it in all your interactions
 3. Increase the version numbers in any examples files and the README.md to the new version that this
    Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
    example:- If you see v1.0.0 in production then the version number should be v1.1.0 and if subsequent additions/ deletions are made then increase the last digit by 1 for each pull request. In the end that version will be released.
-4. You may merge the Pull Request in once you have the sign-off of two other developers, or if you
-   do not have permission to do that, you may request the second reviewer to merge it for you.
