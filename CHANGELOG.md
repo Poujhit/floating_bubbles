@@ -1,3 +1,9 @@
+## [2.0.0] - 13 March 2021
+
+* **New**: Floating Bubbles Package is Sound Null Safe (Flutter 2.0).
+* **Fix**: Removed Widgets that got depreciated in Flutter 2.0 in the example.
+* **Fix**: Fixed minor null errors.
+
 ## [1.6.0] - 06 March 2021
 
 * **Fix**: Web support is added and tested. Read the readme.md for more info.
