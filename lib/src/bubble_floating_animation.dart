@@ -75,7 +75,8 @@ class BubbleFloatingAnimation {
   /// Shuffles the position of bubbles around the screen.
   void _shuffle() {
     startTime -= Duration(
-      milliseconds: (this.random.nextDouble() * duration.inMilliseconds).round(),
+      milliseconds:
+          (this.random.nextDouble() * duration.inMilliseconds).round(),
     );
   }
 
