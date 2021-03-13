@@ -7,7 +7,7 @@
 In your flutter project(in pubspec.yaml) add the dependency:
 ```yaml
 dependencies:
-   floating_bubbles: ^1.6.0
+   floating_bubbles: ^2.0.0
 ```
 
 Import the package:
@@ -33,14 +33,16 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
          noOfBubbles: 25,
          colorOfBubbles: Colors.green.withAlpha(30),
          sizeFactor: 0.16,
-         duration: 120, //120 seconds. 
+         duration: 120, // 120 seconds. 
          opacity: 70,
          paintingStyle: PaintingStyle.stroke,
          strokeWidth: 8,
-         shape: BubbleShape.circle, //circle is the default. No need to explicitly mention if its a circle.
+         shape: BubbleShape.circle, // circle is the default. No need to explicitly mention if its a circle.
     ),
  );
  ``` 
+
+ ---
 
  ### Creating FloatingBubbles.alwaysRepeating() (Creates Floating Bubbles that always floats and doesn't stop.)
  ```dart
@@ -75,6 +77,8 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
  | `paintingStyle` | Painting Style of the bubbles. | **No** | `PaintingStyle.fill` |
  | `strokeWidth` | Stroke Width of the bubbles. This value is effective only if `Painting Style` is set to `PaintingStyle.stroke`. | **No** | `0` |
  | `shape` | Shape of the bubbles. | **No** | `BubbleShape.circle` |
+
+ ---
  
  ### For Creating FloatingBubbles.alwaysRepeating()
   | Name | Description | Is It Required | Default Value |
@@ -87,12 +91,16 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
   | `strokeWidth` | Stroke Width of the bubbles. This value is effective only if `Painting Style` is set to `PaintingStyle.stroke`. | **No** | `0` |
   | `shape` | Shape of the bubbles. | **No** | `BubbleShape.circle` |
 
+  ---
+
  ## Example
  The code for the Example shown below is [here](https://pub.dev/packages/floating_bubbles/example).
 
  <p align = "middle">
  <img src="https://raw.githubusercontent.com/Poujhit/floating_bubbles/master/screenshots/example1.gif" width="320" height = "650">
  </p>
+
+ ---
 
  <p align = "middle">
  <img src="https://raw.githubusercontent.com/Poujhit/floating_bubbles/master/screenshots/example2.gif" width="320" height = "650">
@@ -128,6 +136,8 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
  <img src="https://raw.githubusercontent.com/Poujhit/floating_bubbles/master/screenshots/fps_test_release.png">
  </p>
 
+ ---
+
   ### Average FPS of the UI when the package was stress tested on a High-end Android Phone
 
  APP build in **Release Mode**
@@ -137,12 +147,14 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
 
  Performance improvements will be made in the coming updates to make this package more suitable for low end devices. If you have any suggestions or ideas, just pull request :)
 
+ ---
+
  ## About Me
  - [My Other Works](https://github.com/Poujhit)
 
  ## Support
  Give a ⭐/👍 if you liked the work!! :)
- Suggestions are Welcome. Any issues just open an issue. I will reach you as soon as possible.
+ Suggestions are Welcome. Any issues just open an issue in Github. I will reach you as soon as possible.
 
  ## License
  The Scripts and Documentation in this project are released under the [MIT License](https://github.com/Poujhit/floating_bubbles/blob/master/LICENSE) 
