@@ -7,7 +7,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  simple_animations: ^3.0.1
+  simple_animations: ^3.0.3
   flutter:
     sdk: flutter
  
