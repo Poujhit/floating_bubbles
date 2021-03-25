@@ -1,3 +1,9 @@
+## [2.1.0] - 25 March 2021
+
+* **New**: Added a new shape `BubbleShape.roundedRectanle`.
+* **Fix**: Example App is completely null safe now.
+* **Fix**: Fixed minor bugs.
+
 ## [2.0.0] - 13 March 2021
 
 * **New**: Floating Bubbles Package is Sound Null Safe (Flutter 2.0).
