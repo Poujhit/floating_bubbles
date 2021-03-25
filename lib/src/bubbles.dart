@@ -7,7 +7,7 @@ import 'package:simple_animations/simple_animations.dart';
 import 'bubble_floating_animation.dart';
 
 ///Enum for Setting the Shape of the bubble
-enum BubbleShape { circle, square }
+enum BubbleShape { circle, square, roundedRectangle }
 
 /// Creates Floating Bubbles in the Foreground of Any [widgets].
 // ignore: must_be_immutable

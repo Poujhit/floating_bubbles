@@ -159,13 +159,25 @@ class BubbleModel extends CustomPainter {
           size.width * sizeFactor * particle.size,
           paint,
         );
-      else
+      else if (shape == BubbleShape.square)
         canvas.drawRect(
             Rect.fromCircle(
               center: position,
               radius: size.width * sizeFactor * particle.size,
             ),
             paint);
+      else {
+        Rect rect() => Rect.fromCircle(
+              center: position,
+              radius: size.width * sizeFactor * particle.size,
+            );
+        canvas.drawRRect(
+            RRect.fromRectAndRadius(
+              rect(),
+              Radius.circular(size.width * sizeFactor * particle.size * 0.5),
+            ),
+            paint);
+      }
     });
   }
 
