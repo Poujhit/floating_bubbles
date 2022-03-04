@@ -23,7 +23,10 @@ class MyApp extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    eachFrame().take(10000).transform(const ComputeFps()).listen((fps) => print('fps: $fps'));
+    eachFrame()
+        .take(10000)
+        .transform(const ComputeFps())
+        .listen((fps) => print('fps: $fps'));
     return Stack(
       children: [
         Positioned.fill(
@@ -34,7 +37,10 @@ class HomePage extends StatelessWidget {
         Positioned.fill(
           child: FloatingBubbles.alwaysRepeating(
             noOfBubbles: 10,
-            colorOfBubbles: Colors.white,
+            colorsOfBubbles: [
+              Colors.white,
+              Colors.red,
+            ],
             sizeFactor: 0.2,
             opacity: 70,
             paintingStyle: PaintingStyle.fill,

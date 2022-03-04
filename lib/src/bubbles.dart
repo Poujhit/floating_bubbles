@@ -20,7 +20,7 @@ class FloatingBubbles extends StatefulWidget {
   ///
   /// For example `colorOfBubbles = Colors.white.withAlpha(30).`\
   ///`withAlpha(30)` will give a lighter shade to the bubbles.
-  final Color colorOfBubbles;
+  final List<Color> colorsOfBubbles;
 
   /// Add Size Factor to the bubbles
   ///
@@ -52,7 +52,7 @@ class FloatingBubbles extends StatefulWidget {
   /// `FloatingBubbles.alwaysRepeating()`.
   FloatingBubbles({
     required this.noOfBubbles,
-    required this.colorOfBubbles,
+    required this.colorsOfBubbles,
     required this.sizeFactor,
     required this.duration,
     this.shape = BubbleShape.circle,
@@ -72,13 +72,17 @@ class FloatingBubbles extends StatefulWidget {
         assert(
           opacity >= 0 && opacity <= 255,
           'opacity value should be between 0 and 255 inclusive.',
+        ),
+        assert(
+          colorsOfBubbles.isNotEmpty,
+          'at least one color must be specified',
         );
 
   /// Creates Floating Bubbles that always floats and doesn't stop.
   /// All Fields Are Required to make a new [Instance] of FloatingBubbles.
   FloatingBubbles.alwaysRepeating({
     required this.noOfBubbles,
-    required this.colorOfBubbles,
+    required this.colorsOfBubbles,
     required this.sizeFactor,
     this.shape = BubbleShape.circle,
     this.opacity = 60,
@@ -116,8 +120,15 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
 
   @override
   void initState() {
+    final _random = new Random();
     for (int i = 0; i < widget.noOfBubbles; i++) {
-      bubbles.add(BubbleFloatingAnimation(random));
+      bubbles.add(
+        BubbleFloatingAnimation(
+          random,
+          color: widget
+              .colorsOfBubbles[_random.nextInt(widget.colorsOfBubbles.length)],
+        ),
+      );
     }
     if (widget.duration != null && widget.duration != 0)
       Timer(Duration(seconds: widget.duration!), () {
@@ -149,7 +160,7 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
               return drawBubbles(
                 bubbles: BubbleModel(
                   bubbles: bubbles,
-                  color: widget.colorOfBubbles,
+                  colors: widget.colorsOfBubbles,
                   sizeFactor: widget.sizeFactor,
                   opacity: widget.opacity,
                   paintingStyle: widget.paintingStyle,
@@ -170,7 +181,7 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
                 return drawBubbles(
                   bubbles: BubbleModel(
                     bubbles: bubbles,
-                    color: widget.colorOfBubbles,
+                    colors: widget.colorsOfBubbles,
                     sizeFactor: widget.sizeFactor,
                     opacity: widget.opacity,
                     paintingStyle: widget.paintingStyle,
