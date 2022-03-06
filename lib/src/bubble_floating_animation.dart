@@ -109,9 +109,6 @@ class BubbleModel extends CustomPainter {
   /// List of all bubbles in the screen at a given time.
   final List<BubbleFloatingAnimation> bubbles;
 
-  /// Colors to use for bubbles.
-  final List<Color> colors;
-
   /// Size factor of the bubble.
   final double sizeFactor;
 
@@ -133,7 +130,6 @@ class BubbleModel extends CustomPainter {
   /// All Fields are Required.
   BubbleModel({
     required this.bubbles,
-    required this.colors,
     required this.sizeFactor,
     required this.opacity,
     required this.paintingStyle,

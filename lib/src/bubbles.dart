@@ -160,7 +160,6 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
               return drawBubbles(
                 bubbles: BubbleModel(
                   bubbles: bubbles,
-                  colors: widget.colorsOfBubbles,
                   sizeFactor: widget.sizeFactor,
                   opacity: widget.opacity,
                   paintingStyle: widget.paintingStyle,
@@ -181,7 +180,6 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
                 return drawBubbles(
                   bubbles: BubbleModel(
                     bubbles: bubbles,
-                    colors: widget.colorsOfBubbles,
                     sizeFactor: widget.sizeFactor,
                     opacity: widget.opacity,
                     paintingStyle: widget.paintingStyle,

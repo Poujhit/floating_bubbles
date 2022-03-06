@@ -11,7 +11,7 @@ In your flutter project(in pubspec.yaml) add the dependency:
 
 ```yaml
 dependencies:
-  floating_bubbles: ^2.1.1
+    floating_bubbles: ^2.1.1
 ```
 
 Import the package:
@@ -37,7 +37,10 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
      Positioned.fill(
          child: FloatingBubbles(
          noOfBubbles: 25,
-         colorOfBubbles: Colors.green.withAlpha(30),
+         colorsOfBubbles: [
+            Colors.green.withAlpha(30),
+            Colors.red,
+         ],
          sizeFactor: 0.16,
          duration: 120, // 120 seconds.
          opacity: 70,
@@ -63,7 +66,10 @@ return Stack(
     Positioned.fill(
         child: FloatingBubbles.alwaysRepeating(
         noOfBubbles: 25,
-        colorOfBubbles: Colors.green.withAlpha(30),
+         colorsOfBubbles: [
+            Colors.green.withAlpha(30),
+            Colors.red,
+         ],
         sizeFactor: 0.16,
         opacity: 70,
         paintingStyle: PaintingStyle.fill,
@@ -76,30 +82,30 @@ return Stack(
 
 ### For Creating FloatingBubbles()
 
-|       Name       |                                                   Description                                                   | Is It Required |    Default Value     |
-| :--------------: | :-------------------------------------------------------------------------------------------------------------: | :------------: | :------------------: |
-|  `noOfBubbles`   |                           No. of Bubbles to be present in the screen at a given Time                            |    **Yes**     |         `-`          |
-| `colorOfBubbles` |                                              Color of the bubbles                                               |    **Yes**     |         `-`          |
-|   `sizeFactor`   |                                           Size Factor of each bubbles                                           |    **Yes**     |         `-`          |
-|    `duration`    |                           Duration to play the animation (input is taken as seconds)                            |    **Yes**     |         `-`          |
-|    `opacity`     |                                             Opacity of the bubbles                                              |     **No**     |         `60`         |
-| `paintingStyle`  |                                         Painting Style of the bubbles.                                          |     **No**     | `PaintingStyle.fill` |
-|  `strokeWidth`   | Stroke Width of the bubbles. This value is effective only if `Painting Style` is set to `PaintingStyle.stroke`. |     **No**     |         `0`          |
-|     `shape`      |                                              Shape of the bubbles.                                              |     **No**     | `BubbleShape.circle` |
+|       Name        |                                                   Description                                                   | Is It Required |    Default Value     |
+| :---------------: | :-------------------------------------------------------------------------------------------------------------: | :------------: | :------------------: |
+|   `noOfBubbles`   |                           No. of Bubbles to be present in the screen at a given Time                            |    **Yes**     |         `-`          |
+| `colorsOfBubbles` |                  List of colors for the bubbles. Colors are selected randomly for each bubble.                  |    **Yes**     |         `-`          |
+|   `sizeFactor`    |                                           Size Factor of each bubbles                                           |    **Yes**     |         `-`          |
+|    `duration`     |                           Duration to play the animation (input is taken as seconds)                            |    **Yes**     |         `-`          |
+|     `opacity`     |                                             Opacity of the bubbles                                              |     **No**     |         `60`         |
+|  `paintingStyle`  |                                         Painting Style of the bubbles.                                          |     **No**     | `PaintingStyle.fill` |
+|   `strokeWidth`   | Stroke Width of the bubbles. This value is effective only if `Painting Style` is set to `PaintingStyle.stroke`. |     **No**     |         `0`          |
+|      `shape`      |                                              Shape of the bubbles.                                              |     **No**     | `BubbleShape.circle` |
 
 ---
 
 ### For Creating FloatingBubbles.alwaysRepeating()
 
-|       Name       |                                                   Description                                                   | Is It Required |    Default Value     |
-| :--------------: | :-------------------------------------------------------------------------------------------------------------: | :------------: | :------------------: |
-|  `noOfBubbles`   |                           No. of Bubbles to be present in the screen at a given Time                            |    **Yes**     |         `-`          |
-| `colorOfBubbles` |                                              Color of the bubbles                                               |    **Yes**     |         `-`          |
-|   `sizeFactor`   |                                           Size Factor of each bubbles                                           |    **Yes**     |         `-`          |
-|    `opacity`     |                                             Opacity of the bubbles                                              |     **No**     |         `60`         |
-| `paintingStyle`  |                                         Painting Style of the bubbles.                                          |     **No**     | `PaintingStyle.fill` |
-|  `strokeWidth`   | Stroke Width of the bubbles. This value is effective only if `Painting Style` is set to `PaintingStyle.stroke`. |     **No**     |         `0`          |
-|     `shape`      |                                              Shape of the bubbles.                                              |     **No**     | `BubbleShape.circle` |
+|       Name        |                                                   Description                                                   | Is It Required |    Default Value     |
+| :---------------: | :-------------------------------------------------------------------------------------------------------------: | :------------: | :------------------: |
+|   `noOfBubbles`   |                           No. of Bubbles to be present in the screen at a given Time                            |    **Yes**     |         `-`          |
+| `colorsOfBubbles` |                  List of colors for the bubbles. Colors are selected randomly for each bubble.                  |    **Yes**     |         `-`          |
+|   `sizeFactor`    |                                           Size Factor of each bubbles                                           |    **Yes**     |         `-`          |
+|     `opacity`     |                                             Opacity of the bubbles                                              |     **No**     |         `60`         |
+|  `paintingStyle`  |                                         Painting Style of the bubbles.                                          |     **No**     | `PaintingStyle.fill` |
+|   `strokeWidth`   | Stroke Width of the bubbles. This value is effective only if `Painting Style` is set to `PaintingStyle.stroke`. |     **No**     |         `0`          |
+|      `shape`      |                                              Shape of the bubbles.                                              |     **No**     | `BubbleShape.circle` |
 
 ---
 
@@ -165,7 +171,7 @@ Performance improvements will be made in the coming updates to make this package
 
 ## About Me
 
-- [My Other Works](https://github.com/Poujhit)
+-   [My Other Works](https://github.com/Poujhit)
 
 ## Support
 
