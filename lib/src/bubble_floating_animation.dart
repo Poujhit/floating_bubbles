@@ -23,7 +23,10 @@ class BubbleFloatingAnimation {
   /// Random object.
   final Random random;
 
-  BubbleFloatingAnimation(this.random) {
+  /// Color of the bubble
+  final Color color;
+
+  BubbleFloatingAnimation(this.random, {required this.color}) {
     _restart();
     _shuffle();
   }
@@ -106,9 +109,6 @@ class BubbleModel extends CustomPainter {
   /// List of all bubbles in the screen at a given time.
   final List<BubbleFloatingAnimation> bubbles;
 
-  /// Color of the bubble.
-  final Color color;
-
   /// Size factor of the bubble.
   final double sizeFactor;
 
@@ -130,7 +130,6 @@ class BubbleModel extends CustomPainter {
   /// All Fields are Required.
   BubbleModel({
     required this.bubbles,
-    required this.color,
     required this.sizeFactor,
     required this.opacity,
     required this.paintingStyle,
@@ -141,12 +140,11 @@ class BubbleModel extends CustomPainter {
   /// Painting the bubbles in the screen.
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = color.withAlpha(opacity)
-      ..style = paintingStyle
-      ..strokeWidth = strokeWidth; //can be from 5 to 15.
-
     bubbles.forEach((particle) {
+      final paint = Paint()
+        ..color = particle.color.withAlpha(opacity)
+        ..style = paintingStyle
+        ..strokeWidth = strokeWidth; //can be from 5 to 15.
       final progress = particle.progress();
       final MultiTweenValues animation = particle.tween.transform(progress);
       final position = Offset(
