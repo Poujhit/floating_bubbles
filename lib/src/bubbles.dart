@@ -75,7 +75,7 @@ class FloatingBubbles extends StatefulWidget {
         ),
         assert(
           colorsOfBubbles.isNotEmpty,
-          'at least one color must be specified',
+          'Atleast one color must be specified',
         );
 
   /// Creates Floating Bubbles that always floats and doesn't stop.
