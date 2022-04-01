@@ -9,11 +9,11 @@ int _previous = 0;
 /// frame, given that it will attempt to be called 60 times per second (60 FPS)
 /// by default - customize by setting the [target].
 Future<num> nextFrame([num target = 60]) {
-  final current = new DateTime.now().millisecondsSinceEpoch;
+  final current = DateTime.now().millisecondsSinceEpoch;
   final call = math.max(0, (1000 ~/ target) - (current - _previous));
-  return new Future.delayed(
-    new Duration(milliseconds: call),
-    () => _previous = new DateTime.now().millisecondsSinceEpoch,
+  return Future.delayed(
+    Duration(milliseconds: call),
+    () => _previous = DateTime.now().millisecondsSinceEpoch,
   );
 }
 
@@ -26,7 +26,7 @@ Future<num> nextFrame([num target = 60]) {
 /// ```
 /// eachFrame(animationFrame: () => window.animationFrame)
 /// ```
-Stream<num> eachFrame({Future<num> animationFrame(): nextFrame}) {
+Stream<num> eachFrame({Future<num> Function() animationFrame = nextFrame}) {
   // ignore: close_sinks
   late StreamController<num> controller;
   var cancelled = false;
@@ -36,7 +36,7 @@ Stream<num> eachFrame({Future<num> animationFrame(): nextFrame}) {
     animationFrame().then(onNext);
   }
 
-  controller = new StreamController<num>(
+  controller = StreamController<num>(
     sync: true,
     onListen: () {
       animationFrame().then(onNext);
@@ -75,7 +75,7 @@ class ComputeFps implements StreamTransformer<num, num> {
     late StreamSubscription<num> subscription;
     num frameTime = 0;
     num? lastLoop;
-    controller = new StreamController<num>(
+    controller = StreamController<num>(
       sync: true,
       onListen: () {
         subscription = stream.listen((thisLoop) {
