@@ -1,3 +1,9 @@
+## [2.2.0] - 01 April 2022
+
+- **New**: Added functionality to support multiple random bubble colors.
+- **Breaking Change**: `colorOfBubbles` is changed to `colorsOfBubbles`
+- **Fix**: Project dependencies updated to latest version.
+
 ## [2.1.1] - 23 June 2021
 
 - **Fix**: Project dependencies updated to latest version.
