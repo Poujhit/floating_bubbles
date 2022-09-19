@@ -9,8 +9,10 @@ import 'bubble_floating_animation.dart';
 ///Enum for Setting the Shape of the bubble
 enum BubbleShape { circle, square, roundedRectangle }
 
+///Enum for Setting the speed at which the bubbles go through screen
+enum BubbleSpeed { fast, normal, slow }
+
 /// Creates Floating Bubbles in the Foreground of Any [widgets].
-// ignore: must_be_immutable
 class FloatingBubbles extends StatefulWidget {
   /// Number of Bubbles to be shown per second. Should be [> 10] and not [null].
   /// Whenever this value is changed, do a **Hot Restart** to see the Changes.
@@ -30,7 +32,7 @@ class FloatingBubbles extends StatefulWidget {
   /// Number of [Seconds] the animation needs to draw on the screen.
   /// If you want the bubbles to be floating always then use the constructor
   /// `FloatingBubbles.alwaysRepeating()`.
-  int? duration;
+  final int? duration;
 
   /// Opacity of the bubbles. Can take the value between 0 to 255.
   final int opacity;
@@ -44,6 +46,9 @@ class FloatingBubbles extends StatefulWidget {
 
   /// Shape of the Bubble. Default value is [BubbleShape.circle]
   final BubbleShape shape;
+
+  /// controls the speed at which bubbles appear/disappear
+  final BubbleSpeed speed;
 
   /// Creates Floating Bubbles in the Foreground to Any widgets that plays for [duration] amount of time.
   ///
@@ -59,6 +64,7 @@ class FloatingBubbles extends StatefulWidget {
     this.opacity = 100,
     this.paintingStyle = PaintingStyle.fill,
     this.strokeWidth = 0,
+    this.speed = BubbleSpeed.normal,
   })  : assert(
           noOfBubbles >= 10,
           'Number of Bubbles Cannot be less than 10',
@@ -67,8 +73,7 @@ class FloatingBubbles extends StatefulWidget {
           sizeFactor > 0 && sizeFactor < 0.5,
           'Size factor cannot be greater than 0.5 or less than 0',
         ),
-        assert(duration != null && duration >= 0,
-            'duration should not be null or less than 0.'),
+        assert(duration != null && duration >= 0, 'duration should not be null or less than 0.'),
         assert(
           opacity >= 0 && opacity <= 255,
           'opacity value should be between 0 and 255 inclusive.',
@@ -88,6 +93,8 @@ class FloatingBubbles extends StatefulWidget {
     this.opacity = 60,
     this.paintingStyle = PaintingStyle.fill,
     this.strokeWidth = 0,
+    this.duration = 0,
+    this.speed = BubbleSpeed.normal,
   })  : assert(
           noOfBubbles >= 10,
           'Number of Bubbles Cannot be less than 10',
@@ -99,9 +106,7 @@ class FloatingBubbles extends StatefulWidget {
         assert(
           opacity >= 0 && opacity <= 255,
           'opacity value should be between 0 and 255 inclusive.',
-        ) {
-    duration = 0;
-  }
+        );
 
   @override
   _FloatingBubblesState createState() => _FloatingBubblesState();
@@ -125,8 +130,8 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
       bubbles.add(
         BubbleFloatingAnimation(
           random,
-          color: widget
-              .colorsOfBubbles[_random.nextInt(widget.colorsOfBubbles.length)],
+          color: widget.colorsOfBubbles[_random.nextInt(widget.colorsOfBubbles.length)],
+          speed: widget.speed,
         ),
       );
     }
@@ -170,9 +175,7 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
             },
           )
         : PlayAnimation(
-            duration: checkToStopAnimation == 0
-                ? Duration(seconds: widget.duration!)
-                : Duration.zero,
+            duration: checkToStopAnimation == 0 ? Duration(seconds: widget.duration!) : Duration.zero,
             tween: ConstantTween(1),
             builder: (context, child, value) {
               _simulateBubbles();

@@ -26,7 +26,10 @@ class BubbleFloatingAnimation {
   /// Color of the bubble
   final Color color;
 
-  BubbleFloatingAnimation(this.random, {required this.color}) {
+  /// Speed of the bubble
+  final BubbleSpeed speed;
+
+  BubbleFloatingAnimation(this.random, {required this.color, required this.speed}) {
     _restart();
     _shuffle();
   }
@@ -59,11 +62,19 @@ class BubbleFloatingAnimation {
       );
 
     duration = Duration(
-          milliseconds: 3000,
+          milliseconds: speed == BubbleSpeed.fast
+              ? 1500
+              : speed == BubbleSpeed.normal
+                  ? 3000
+                  : 6000,
         ) +
         Duration(
           milliseconds: random.nextInt(
-            6000,
+            speed == BubbleSpeed.fast
+                ? 3000
+                : speed == BubbleSpeed.normal
+                    ? 6000
+                    : 12000,
           ),
         );
 
@@ -78,8 +89,7 @@ class BubbleFloatingAnimation {
   /// Shuffles the position of bubbles around the screen.
   void _shuffle() {
     startTime -= Duration(
-      milliseconds:
-          (this.random.nextDouble() * duration.inMilliseconds).round(),
+      milliseconds: (this.random.nextDouble() * duration.inMilliseconds).round(),
     );
   }
 
