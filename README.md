@@ -47,6 +47,7 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
          paintingStyle: PaintingStyle.stroke,
          strokeWidth: 8,
          shape: BubbleShape.circle, // circle is the default. No need to explicitly mention if its a circle.
+         speed: BubbleSpeed.normal, // normal is the default
     ),
  );
 ```
@@ -74,6 +75,8 @@ return Stack(
         opacity: 70,
         paintingStyle: PaintingStyle.fill,
         shape: BubbleShape.square,
+        speed: BubbleSpeed.normal, 
+        
    ),
 );
 ```
@@ -92,6 +95,8 @@ return Stack(
 |  `paintingStyle`  |                                         Painting Style of the bubbles.                                          |     **No**     | `PaintingStyle.fill` |
 |   `strokeWidth`   | Stroke Width of the bubbles. This value is effective only if `Painting Style` is set to `PaintingStyle.stroke`. |     **No**     |         `0`          |
 |      `shape`      |                                              Shape of the bubbles.                                              |     **No**     | `BubbleShape.circle` |
+|      `speed`      |                                  Control the speed of the bubbles.                                              |     **No**     | `BubbleSpeed.normal` |
+
 
 ---
 
@@ -106,6 +111,8 @@ return Stack(
 |  `paintingStyle`  |                                         Painting Style of the bubbles.                                          |     **No**     | `PaintingStyle.fill` |
 |   `strokeWidth`   | Stroke Width of the bubbles. This value is effective only if `Painting Style` is set to `PaintingStyle.stroke`. |     **No**     |         `0`          |
 |      `shape`      |                                              Shape of the bubbles.                                              |     **No**     | `BubbleShape.circle` |
+|      `speed`      |                                  Control the speed of the bubbles.                                              |     **No**     | `BubbleSpeed.normal` |
+
 
 ---
 
