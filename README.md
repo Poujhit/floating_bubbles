@@ -92,6 +92,8 @@ return Stack(
 |  `paintingStyle`  |                                         Painting Style of the bubbles.                                          |     **No**     | `PaintingStyle.fill` |
 |   `strokeWidth`   | Stroke Width of the bubbles. This value is effective only if `Painting Style` is set to `PaintingStyle.stroke`. |     **No**     |         `0`          |
 |      `shape`      |                                              Shape of the bubbles.                                              |     **No**     | `BubbleShape.circle` |
+|      `speed`      |                                  Control the speed of the bubbles.                                              |     **No**     | `BubbleSpeed.normal` |
+
 
 ---
 
@@ -106,6 +108,8 @@ return Stack(
 |  `paintingStyle`  |                                         Painting Style of the bubbles.                                          |     **No**     | `PaintingStyle.fill` |
 |   `strokeWidth`   | Stroke Width of the bubbles. This value is effective only if `Painting Style` is set to `PaintingStyle.stroke`. |     **No**     |         `0`          |
 |      `shape`      |                                              Shape of the bubbles.                                              |     **No**     | `BubbleShape.circle` |
+|      `speed`      |                                  Control the speed of the bubbles.                                              |     **No**     | `BubbleSpeed.normal` |
+
 
 ---
 
