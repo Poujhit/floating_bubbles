@@ -20,7 +20,8 @@
 ///           sizeFactor: 0.2,
 ///           opacity: 70,
 ///           paintingStyle: PaintingStyle.fill,
-///           shape: BubbleShape.circle, //This is the default
+///           shape: BubbleShape.circle, // This is the default
+///           speed: BubbleSpeed.normal, // This is the default
 ///          ),
 ///       ),
 ///     ],
