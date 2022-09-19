@@ -1,3 +1,8 @@
+## [2.3.0] - 19 September 2022
+
+- **New**: Added an option to control the speed of the bubble going through the screen.
+- **Fix**: Project dependencies updated to latest version.
+
 ## [2.2.0] - 01 April 2022
 
 - **New**: Added functionality to support multiple random bubble colors.
