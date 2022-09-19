@@ -47,6 +47,7 @@ Here is an snippet on how to use Floating Bubbles to any Widget.
          paintingStyle: PaintingStyle.stroke,
          strokeWidth: 8,
          shape: BubbleShape.circle, // circle is the default. No need to explicitly mention if its a circle.
+         speed: BubbleSpeed.normal, // normal is the default
     ),
  );
 ```
@@ -74,6 +75,8 @@ return Stack(
         opacity: 70,
         paintingStyle: PaintingStyle.fill,
         shape: BubbleShape.square,
+        speed: BubbleSpeed.normal, 
+        
    ),
 );
 ```
