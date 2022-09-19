@@ -28,7 +28,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // ignore: avoid_print
     eachFrame()
         .take(10000)
         .transform(const ComputeFps())
@@ -43,13 +42,14 @@ class HomePage extends StatelessWidget {
         ),
         Positioned.fill(
           child: FloatingBubbles.alwaysRepeating(
-            noOfBubbles: 10,
+            noOfBubbles: 50,
             colorsOfBubbles: const [
               Colors.white,
               Colors.red,
             ],
             sizeFactor: 0.2,
             opacity: 70,
+            speed: BubbleSpeed.slow,
             paintingStyle: PaintingStyle.fill,
             shape: BubbleShape.circle, //This is the default
           ),
