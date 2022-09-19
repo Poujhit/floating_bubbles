@@ -11,7 +11,7 @@ In your flutter project(in pubspec.yaml) add the dependency:
 
 ```yaml
 dependencies:
-  floating_bubbles: ^2.2.0
+  floating_bubbles: ^2.3.0
 ```
 
 Import the package:
@@ -75,8 +75,8 @@ return Stack(
         opacity: 70,
         paintingStyle: PaintingStyle.fill,
         shape: BubbleShape.square,
-        speed: BubbleSpeed.normal, 
-        
+        speed: BubbleSpeed.normal,
+
    ),
 );
 ```
@@ -95,8 +95,7 @@ return Stack(
 |  `paintingStyle`  |                                         Painting Style of the bubbles.                                          |     **No**     | `PaintingStyle.fill` |
 |   `strokeWidth`   | Stroke Width of the bubbles. This value is effective only if `Painting Style` is set to `PaintingStyle.stroke`. |     **No**     |         `0`          |
 |      `shape`      |                                              Shape of the bubbles.                                              |     **No**     | `BubbleShape.circle` |
-|      `speed`      |                                  Control the speed of the bubbles.                                              |     **No**     | `BubbleSpeed.normal` |
-
+|      `speed`      |                                        Control the speed of the bubbles.                                        |     **No**     | `BubbleSpeed.normal` |
 
 ---
 
@@ -111,8 +110,7 @@ return Stack(
 |  `paintingStyle`  |                                         Painting Style of the bubbles.                                          |     **No**     | `PaintingStyle.fill` |
 |   `strokeWidth`   | Stroke Width of the bubbles. This value is effective only if `Painting Style` is set to `PaintingStyle.stroke`. |     **No**     |         `0`          |
 |      `shape`      |                                              Shape of the bubbles.                                              |     **No**     | `BubbleShape.circle` |
-|      `speed`      |                                  Control the speed of the bubbles.                                              |     **No**     | `BubbleSpeed.normal` |
-
+|      `speed`      |                                        Control the speed of the bubbles.                                        |     **No**     | `BubbleSpeed.normal` |
 
 ---
 
