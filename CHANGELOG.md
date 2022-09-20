@@ -1,3 +1,8 @@
+## [2.4.0] - 20 September 2022
+
+- **Fix**: Dependency change to ss4 migration to support the lastest simple animation package v4
+- **Fix**: Code formatting fixes
+
 ## [2.3.0] - 19 September 2022
 
 - **New**: Added an option to control the speed of the bubble going through the screen.
