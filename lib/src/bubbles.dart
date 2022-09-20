@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:simple_animations/simple_animations.dart';
+import 'package:sa4_migration_kit/sa4_migration_kit.dart';
 
 import 'bubble_floating_animation.dart';
 
@@ -73,7 +73,8 @@ class FloatingBubbles extends StatefulWidget {
           sizeFactor > 0 && sizeFactor < 0.5,
           'Size factor cannot be greater than 0.5 or less than 0',
         ),
-        assert(duration != null && duration >= 0, 'duration should not be null or less than 0.'),
+        assert(duration != null && duration >= 0,
+            'duration should not be null or less than 0.'),
         assert(
           opacity >= 0 && opacity <= 255,
           'opacity value should be between 0 and 255 inclusive.',
@@ -130,7 +131,8 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
       bubbles.add(
         BubbleFloatingAnimation(
           random,
-          color: widget.colorsOfBubbles[_random.nextInt(widget.colorsOfBubbles.length)],
+          color: widget
+              .colorsOfBubbles[_random.nextInt(widget.colorsOfBubbles.length)],
           speed: widget.speed,
         ),
       );
@@ -175,7 +177,9 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
             },
           )
         : PlayAnimation(
-            duration: checkToStopAnimation == 0 ? Duration(seconds: widget.duration!) : Duration.zero,
+            duration: checkToStopAnimation == 0
+                ? Duration(seconds: widget.duration!)
+                : Duration.zero,
             tween: ConstantTween(1),
             builder: (context, child, value) {
               _simulateBubbles();

@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:floating_bubbles/floating_bubbles.dart';
 import 'package:flutter/material.dart';
-import 'package:simple_animations/simple_animations.dart';
+import 'package:sa4_migration_kit/sa4_migration_kit.dart';
 
 enum _OffsetProps { x, y }
 
@@ -29,7 +29,8 @@ class BubbleFloatingAnimation {
   /// Speed of the bubble
   final BubbleSpeed speed;
 
-  BubbleFloatingAnimation(this.random, {required this.color, required this.speed}) {
+  BubbleFloatingAnimation(this.random,
+      {required this.color, required this.speed}) {
     _restart();
     _shuffle();
   }
@@ -89,7 +90,8 @@ class BubbleFloatingAnimation {
   /// Shuffles the position of bubbles around the screen.
   void _shuffle() {
     startTime -= Duration(
-      milliseconds: (this.random.nextDouble() * duration.inMilliseconds).round(),
+      milliseconds:
+          (this.random.nextDouble() * duration.inMilliseconds).round(),
     );
   }
 
