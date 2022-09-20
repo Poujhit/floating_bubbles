@@ -7,7 +7,7 @@ environment:
   flutter: '>=1.17.0'
 
 dependencies:
-  simple_animations: ^4.1.0
+  sa4_migration_kit: ^1.0.0
   flutter:
     sdk: flutter
 

@@ -81,13 +81,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.2"
-  simple_animations:
+  sa4_migration_kit:
     dependency: "direct main"
+    description:
+      name: sa4_migration_kit
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0"
+  simple_animations:
+    dependency: transitive
     description:
       name: simple_animations
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.2.0"
+    version: "5.0.0+2"
   sky_engine:
     dependency: transitive
     description: flutter
