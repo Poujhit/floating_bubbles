@@ -139,9 +139,11 @@ class _FloatingBubblesState extends State<FloatingBubbles> {
     }
     if (widget.duration != null && widget.duration != 0)
       Timer(Duration(seconds: widget.duration!), () {
-        setState(() {
-          checkToStopAnimation = 1;
-        });
+        if(mounted) {
+          setState(() {
+            checkToStopAnimation = 1;
+          });
+        }
       });
     super.initState();
   }
