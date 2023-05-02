@@ -1,3 +1,7 @@
+## [2.5.0] - 02 May 2023
+
+- **Fix**: setState after the widget being disposed #4
+
 ## [2.4.0] - 20 September 2022
 
 - **Fix**: Dependency change to ss4 migration to support the lastest simple animation package v4
