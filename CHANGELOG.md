@@ -1,3 +1,8 @@
+## [2.5.1] - 03 May 2023
+
+- **Fix**: Formatting issue in bubbles.dart file
+- **Code**: Added scripts for deploy and dry-run
+
 ## [2.5.0] - 02 May 2023
 
 - **Fix**: setState after the widget being disposed #4
