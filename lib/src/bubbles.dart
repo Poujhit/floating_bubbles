@@ -66,8 +66,8 @@ class FloatingBubbles extends StatefulWidget {
     this.strokeWidth = 0,
     this.speed = BubbleSpeed.normal,
   })  : assert(
-          noOfBubbles >= 10,
-          'Number of Bubbles Cannot be less than 10',
+          noOfBubbles >= 1,
+          'Number of Bubbles Cannot be less than 1',
         ),
         assert(
           sizeFactor > 0 && sizeFactor < 0.5,

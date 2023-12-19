@@ -1,3 +1,7 @@
+## [2.6.1] - 19 December 2023
+
+- **Fix**: Assert number of bubbles to 1
+
 ## [2.5.1] - 03 May 2023
 
 - **Fix**: Formatting issue in bubbles.dart file
