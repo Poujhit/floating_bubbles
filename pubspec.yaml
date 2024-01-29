@@ -1,6 +1,6 @@
 name: floating_bubbles
 description: A Flutter Package for adding Floating bubbles on the Foreground to any Flutter widget.
-version: 2.6.1
+version: 2.6.2
 homepage: https://github.com/Poujhit/floating_bubbles
 environment:
   sdk: '>=2.12.0 <3.0.0'

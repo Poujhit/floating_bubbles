@@ -1,3 +1,7 @@
+## [2.6.2] - 29 December 2024
+
+- **Fix**: Assert number of bubbles to 1
+
 ## [2.6.1] - 19 December 2023
 
 - **Fix**: Assert number of bubbles to 1
